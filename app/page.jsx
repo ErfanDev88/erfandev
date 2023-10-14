@@ -67,30 +67,30 @@ export default function Home() {
             نویسی می‌تونم فعالیت کنم
           </p>
         </div>
-        <div className="w-full flex flex-col md:flex-row justify-between items-start">
-          <div className="w-1/4 flex flex-col items-center justify-between gap-y-6">
-            <Image src={mobileDeveloper} className="w-full -mb-16" />
+        <div className="w-full flex flex-col md:flex-row justify-between items-center md:items-start">
+          <div className="w-full md:w-1/4 flex flex-col items-center justify-between gap-y-6">
+            <Image src={mobileDeveloper} className="w-72 md:w-full -mb-16" />
             <h1 className="text-3xl font-bold">برنامه نویس موبایل</h1>
-            <p className="text-xl font-extralight text-center leading-relaxed">
+            <p className="w-3/4 md:w-full text-xl font-extralight text-center leading-relaxed">
               به تازگی برنامه نویسی موبایل رو یاد گرفتم و میتونم برنامه های
               اندرویدی و IOS بسازم با بهترین UI ممکن. فعلا پروژه های کوچیک میزنم
               تا کم کم برسم به پروژه های بزرگ و فروشگاهی
             </p>
           </div>
-          <div className="w-1/4 flex flex-col items-center justify-between gap-y-6">
-            <Image src={designer} className="w-full -mb-16" />
+          <div className="w-full md:w-1/4 flex flex-col items-center justify-between gap-y-6">
+            <Image src={designer} className="w-72 md:w-full -mb-16" />
             <h1 className="text-3xl font-bold">طراحی سایت ( UI & UX )</h1>
-            <p className="text-xl font-extralight text-center leading-relaxed">
+            <p className="w-3/4 md:w-full text-xl font-extralight text-center leading-relaxed">
               ببیشتر از ۲ سال هست که در زمینه طراحی سایت یا همون رابط کاربری UI
               & UX تجربه دارم و نمونه کار های زیادی هم دارم. معمولا زیاد روی
               پروژه هام وقت میزارم و از تمام خلاقیتم براشون استفاده میکنم تا
               بتونم طرح های زیبا و کاربر پسندی رو بسازم!
             </p>
           </div>
-          <div className="w-1/4 flex flex-col items-center justify-between gap-y-6">
-            <Image src={webDeveloper} className="w-full -mb-16" />
+          <div className="w-full md:w-1/4 flex flex-col items-center justify-between gap-y-6">
+            <Image src={webDeveloper} className="w-72 md:w-full -mb-16" />
             <h1 className="text-3xl font-bold">برنامه نویس سایت</h1>
-            <p className="text-xl font-extralight text-center leading-relaxed">
+            <p className="w-3/4 md:w-full text-xl font-extralight text-center leading-relaxed">
               بیشتر از ۲ سال هست که توی برنامه نویسی سایت تجربه دارم. معمولا
               سرعتم توی انجام پروژه ها زیاده و معمولا بدون باگ هست. توی کمترین
               زمان و به بهترین شکل ممکن پروژه هارو انجام میدم
