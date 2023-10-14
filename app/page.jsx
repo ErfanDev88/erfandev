@@ -3,6 +3,9 @@ import Image from "next/image";
 import navLine from "../public/assets/Lines/navbar.png";
 import skillLine from "../public/assets/Lines/whatCanIdo.png";
 import heroImage from "../public/assets/heroImage.png";
+import mobileDeveloper from "../public/assets/mobile-developer.png";
+import designer from "../public/assets/designer.png";
+import webDeveloper from "../public/assets/web-developer.png";
 import { TypeAnimation } from "react-type-animation";
 import Btn from "@/components/Btn";
 import ContinueLine from "@/components/ContinueLine";
@@ -50,9 +53,51 @@ export default function Home() {
         src={skillLine}
         width={1800}
         height={1300}
-        className="absolute bottom-5 left-0 -z-50"
+        className="absolute top-[700px] left-0 -z-[60]"
       />
       <ContinueLine from={"#fff"} to={"#FFE57E"} />
+
+      <section className="w-full flex flex-col items-center gap-y-3 mt-10">
+        <div className="flex flex-col items-center justify-center gap-y-10">
+          <h1 className="text-3xl font-medium">چیکار میتونم بکنم؟</h1>
+          <p className="text-2xl font-extralight text-center leading-relaxed">
+            همونطور که بالاتر گفتم، تخصص من برنامه نویسی هست. حالا بخوایم
+            تقسیم‌بندی کنیم بخش‌ها رو، می‌تونم بگم توی سه بخش برنامه نویسی سایت،
+            برنامه نویسی موبایل, طراحی سایت ( UI & UX ) و آموزش دادن برنامه
+            نویسی می‌تونم فعالیت کنم
+          </p>
+        </div>
+        <div className="w-full flex flex-col md:flex-row justify-between items-start">
+          <div className="w-1/4 flex flex-col items-center justify-between gap-y-6">
+            <Image src={mobileDeveloper} className="w-full -mb-16" />
+            <h1 className="text-3xl font-bold">برنامه نویس موبایل</h1>
+            <p className="text-xl font-extralight text-center leading-relaxed">
+              به تازگی برنامه نویسی موبایل رو یاد گرفتم و میتونم برنامه های
+              اندرویدی و IOS بسازم با بهترین UI ممکن. فعلا پروژه های کوچیک میزنم
+              تا کم کم برسم به پروژه های بزرگ و فروشگاهی
+            </p>
+          </div>
+          <div className="w-1/4 flex flex-col items-center justify-between gap-y-6">
+            <Image src={designer} className="w-full -mb-16" />
+            <h1 className="text-3xl font-bold">طراحی سایت ( UI & UX )</h1>
+            <p className="text-xl font-extralight text-center leading-relaxed">
+              ببیشتر از ۲ سال هست که در زمینه طراحی سایت یا همون رابط کاربری UI
+              & UX تجربه دارم و نمونه کار های زیادی هم دارم. معمولا زیاد روی
+              پروژه هام وقت میزارم و از تمام خلاقیتم براشون استفاده میکنم تا
+              بتونم طرح های زیبا و کاربر پسندی رو بسازم!
+            </p>
+          </div>
+          <div className="w-1/4 flex flex-col items-center justify-between gap-y-6">
+            <Image src={webDeveloper} className="w-full -mb-16" />
+            <h1 className="text-3xl font-bold">برنامه نویس سایت</h1>
+            <p className="text-xl font-extralight text-center leading-relaxed">
+              بیشتر از ۲ سال هست که توی برنامه نویسی سایت تجربه دارم. معمولا
+              سرعتم توی انجام پروژه ها زیاده و معمولا بدون باگ هست. توی کمترین
+              زمان و به بهترین شکل ممکن پروژه هارو انجام میدم
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
