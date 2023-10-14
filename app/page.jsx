@@ -2,6 +2,7 @@
 import Image from "next/image";
 import navLine from "../public/assets/Lines/navbar.png";
 import skillLine from "../public/assets/Lines/whatCanIdo.png";
+import workSamplesLine from "../public/assets/Lines/work-samples.png";
 import heroImage from "../public/assets/heroImage.png";
 import mobileDeveloper from "../public/assets/mobile-developer.png";
 import designer from "../public/assets/designer.png";
@@ -9,6 +10,7 @@ import webDeveloper from "../public/assets/web-developer.png";
 import { TypeAnimation } from "react-type-animation";
 import Btn from "@/components/Btn";
 import ContinueLine from "@/components/ContinueLine";
+import WorkSampleCard from "@/components/WorkSampleCard";
 
 export default function Home() {
   return (
@@ -96,6 +98,24 @@ export default function Home() {
               زمان و به بهترین شکل ممکن پروژه هارو انجام میدم
             </p>
           </div>
+        </div>
+      </section>
+
+      <Image
+        src={workSamplesLine}
+        width={1800}
+        height={1300}
+        className="absolute top-[1800px] left-0 -z-[60]"
+      />
+
+      <section className="w-[119.8%] bg-[#A58A44] flex flex-col justify-between items-center mt-44">
+        <div className="-mt-52">
+          <ContinueLine from={"#FFE57E"} to={"#fff"} />
+        </div>
+
+        <h1 className="font-medium text-3xl">آخرین نمونه کار ها</h1>
+        <div className="flex justify-between items-center">
+          <WorkSampleCard />
         </div>
       </section>
     </div>
