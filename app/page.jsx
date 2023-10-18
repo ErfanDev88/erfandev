@@ -3,6 +3,7 @@ import Image from "next/image";
 import navLine from "../public/assets/Lines/navbar.png";
 import skillLine from "../public/assets/Lines/whatCanIdo.png";
 import workSamplesLine from "../public/assets/Lines/work-samples.png";
+import workSamplesLine2 from "../public/assets/Lines/workSamplesLine2.png";
 import heroImage from "../public/assets/heroImage.png";
 import mobileDeveloper from "../public/assets/mobile-developer.png";
 import designer from "../public/assets/designer.png";
@@ -11,6 +12,7 @@ import { TypeAnimation } from "react-type-animation";
 import Btn from "@/components/Btn";
 import ContinueLine from "@/components/ContinueLine";
 import WorkSampleCard from "@/components/WorkSampleCard";
+import OutlineBtn from "@/components/OutlineBtn";
 
 export default function Home() {
   return (
@@ -108,16 +110,34 @@ export default function Home() {
         className="absolute top-[1800px] left-0 -z-[60]"
       />
 
-      <section className="w-[119.8%] bg-[#A58A44] flex flex-col justify-between items-center mt-44">
+      <section className="w-full rounded-2xl md:rounded-none md:w-[119.8%] bg-[#A58A44] flex flex-col justify-between items-center mt-44 gap-y-14">
         <div className="-mt-52">
           <ContinueLine from={"#FFE57E"} to={"#fff"} />
         </div>
 
         <h1 className="font-medium text-3xl">آخرین نمونه کار ها</h1>
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8">
           <WorkSampleCard />
         </div>
+        <OutlineBtn
+          href="/"
+          title="نمونه کار های بیشتر"
+          borderColor="white"
+          textColor="white"
+          bgHoverColor="white"
+          textHoverColor="[#A58A44]"
+        />
+        <div className="-mb-36">
+          <ContinueLine from={"#fff"} to={"#FFE57E"} />
+        </div>
       </section>
+
+      <Image
+        src={workSamplesLine2}
+        width={1800}
+        height={1300}
+        className="absolute top-[2100px] left-0 -z-[60]"
+      />
     </div>
   );
 }

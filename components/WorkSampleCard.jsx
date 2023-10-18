@@ -1,17 +1,25 @@
-import Image from 'next/image'
-import React from 'react'
-import weblearn from '../public/assets/weblearn.png'
-import Btn from './Btn'
+import Image from "next/image";
+import React, { useContext } from "react";
+import Btn from "./Btn";
+import { workContext } from "@/app/Context/WorkSample";
 
 function WorkSampleCard() {
+  const cardData = useContext(workContext);
+
   return (
-    <div className='w-[380px] flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-8'>
-        <Image src={weblearn} className='w-full rounded-2xl'/>
-        <h1 className='text-3xl font-bold'>سایت وب لرن</h1>
-        <p className='text-2xl font-extralight'>یه سایت آموزش برنامه نویسی</p>
-        <Btn title={"مشاهده وب سایت"} href={"/"} />
-    </div>
-  )
+    <>
+      {cardData.map((data) => {
+        return (
+          <div className="h-[550px] w-[380px] flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7">
+            <Image src={data.imageSrc} className="w-full rounded-2xl" />
+            <h1 className="text-3xl font-bold">{data.title}</h1>
+            <p className="text-2xl font-extralight text-center">{data.description}</p>
+            <Btn title={data.btnTitle} href={data.btnHref} />
+          </div>
+        );
+      })}
+    </>
+  );
 }
 
-export default WorkSampleCard
+export default WorkSampleCard;
