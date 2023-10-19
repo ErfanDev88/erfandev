@@ -29,6 +29,13 @@ function WorkSample({ children }) {
       btnTitle: " مشاهده در Dribbble",
       btnHref: "https://dribbble.com/shots/20950885-iPhone-14",
     },
+    {
+      imageSrc: iphone14Site,
+      title: "سایت معرفی iPhone 14",
+      description: "یه سایت برای معرفی گوشی آیفون ۱۴",
+      btnTitle: " مشاهده در Dribbble",
+      btnHref: "https://dribbble.com/shots/20950885-iPhone-14",
+    },
   ]);
 
   return (

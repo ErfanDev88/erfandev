@@ -8,12 +8,17 @@ function WorkSampleCard() {
 
   return (
     <>
-      {cardData.map((data) => {
+      {cardData.slice(0, 3).map((data) => {
         return (
           <div className="h-[550px] w-[380px] flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7">
-            <Image src={data.imageSrc} className="w-full rounded-2xl" />
+            <Image
+              src={data.imageSrc}
+              className="w-full rounded-2xl shadow-xl"
+            />
             <h1 className="text-3xl font-bold">{data.title}</h1>
-            <p className="text-2xl font-extralight text-center">{data.description}</p>
+            <p className="text-2xl font-extralight text-center">
+              {data.description}
+            </p>
             <Btn title={data.btnTitle} href={data.btnHref} />
           </div>
         );

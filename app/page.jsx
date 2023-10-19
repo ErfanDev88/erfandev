@@ -122,7 +122,7 @@ export default function Home() {
           <WorkSampleCard />
         </div>
         <OutlineBtn
-          href="/"
+          href=''
           title="نمونه کار های بیشتر"
           borderColor="white"
           textColor="white"
@@ -138,8 +138,13 @@ export default function Home() {
         src={workSamplesLine2}
         width={1800}
         height={1300}
-        className="absolute top-[2100px] left-0 -z-[60]"
+        className="absolute top-[3300px] left-0 -z-[60]"
       />
+
+      <section className="mt-52">
+        Blog
+      </section>
+
     </div>
   );
 }
