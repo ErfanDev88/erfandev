@@ -10,17 +10,19 @@ function WorkSampleCard() {
     <>
       {cardData.slice(0, 3).map((data) => {
         return (
-          <div className="h-[550px] w-[380px] flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7">
-            <Image
-              src={data.imageSrc}
-              className="w-full rounded-2xl shadow-xl"
-            />
-            <h1 className="text-3xl font-bold">{data.title}</h1>
-            <p className="text-2xl font-extralight text-center">
-              {data.description}
-            </p>
-            <Btn title={data.btnTitle} href={data.btnHref} />
-          </div>
+            <div className="h-[550px] w-[380px] flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7">
+              <div className="w-full rounded-2xl shadow-xl overflow-hidden">
+                <Image
+                  src={data.imageSrc}
+                  className="w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
+                />
+              </div>
+              <h1 className="text-3xl font-bold">{data.title}</h1>
+              <p className="text-2xl font-extralight text-center">
+                {data.description}
+              </p>
+              <Btn title={data.btnTitle} href={data.btnHref} />
+            </div>
         );
       })}
     </>

@@ -6,6 +6,8 @@ import {
   skillLine,
   workSamplesLine,
   workSamplesLine2,
+  TrustLine1,
+  TrustLine2,
   heroImage,
   mobileDeveloper,
   designer,
@@ -13,8 +15,23 @@ import {
   Btn,
   ContinueLine,
   WorkSampleCard,
-  OutlineBtn,
 } from "./index";
+import Link from "next/link";
+import WhyTrustMeIMAGE from '@/public/assets/WhyTrustMeIMAGE.png'
+import SkillsBtn from "@/components/SkillsBtn";
+import JavascriptIcon from '@/public/assets/JavascriptIcon.svg'
+import BootstrapIcon from '@/public/assets/BootstrapIcon.svg'
+import CSS3Icon from '@/public/assets/CSS3Icon.svg'
+import FigmaIcon from '@/public/assets/FigmaIcon.svg'
+import GithubIcon from '@/public/assets/GithubIcon.svg'
+import gitIcon from '@/public/assets/gitIcon.svg'
+import HtmlIcon from '@/public/assets/HtmlIcon.svg'
+import JqueryIcon from '@/public/assets/JqueryIcon.svg'
+import NextjsIcon from '@/public/assets/NextjsIcon.svg'
+import ReactIcon from '@/public/assets/ReactIcon.svg'
+import ResponsiveAIcon from '@/public/assets/ResponsiveAIcon.svg'
+import SassIcon from '@/public/assets/SassIcon.svg'
+import TailwindIcon from '@/public/assets/TailwindIcon.svg'
 
 export default function Home() {
   return (
@@ -112,7 +129,7 @@ export default function Home() {
         className="absolute top-[1800px] left-0 -z-[60]"
       />
 
-      <section className="w-full rounded-2xl md:rounded-none md:w-[119.8%] bg-[#A58A44] flex flex-col justify-between items-center mt-44 gap-y-14">
+      <section className="w-full rounded-2xl md:rounded-none md:w-[119.8%] bg-[#A58A44] flex flex-col justify-between items-center mt-44 gap-y-14 lg:w-[145%]">
         <div className="-mt-52">
           <ContinueLine from={"#FFE57E"} to={"#fff"} />
         </div>
@@ -121,14 +138,12 @@ export default function Home() {
         <div className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8">
           <WorkSampleCard />
         </div>
-        <OutlineBtn
-          href=''
-          title="نمونه کار های بیشتر"
-          borderColor="white"
-          textColor="white"
-          bgHoverColor="white"
-          textHoverColor="[#A58A44]"
-        />
+        <Link
+          href={'/'}
+          className={`outline-btn rounded-2xl text-white border border-white bg-transparent py-4 px-6 text-xl font-medium hover:text-[#A58A44] relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-white before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0`}
+        >
+          نمونه کار های بیشتر
+        </Link>
         <div className="-mb-36">
           <ContinueLine from={"#fff"} to={"#FFE57E"} />
         </div>
@@ -136,13 +151,113 @@ export default function Home() {
 
       <Image
         src={workSamplesLine2}
-        width={1800}
+        width={2000}
         height={1300}
-        className="absolute top-[3300px] left-0 -z-[60]"
+        className="absolute top-[3000px] left-0 -z-[60]"
       />
 
       <section className="mt-52">
-        Blog
+        <h1>blog</h1>
+        <h1>blog</h1>
+        <h1>blog</h1>
+        <h1>blog</h1>
+        <div className="-mb-36">
+          <ContinueLine from={"#FFE57E"} to={"#fff"} />
+        </div>
+      </section>
+
+      <Image
+        src={TrustLine1}
+        width={2000}
+        height={1300}
+        className="absolute top-[2600px] left-0 -z-[60]"
+      />
+
+      <section className="w-full flex flex-col justify-between items-center mt-64 gap-y-24">
+        <h1 className="text-3xl font-medium">دلیل <span className="font-bold text-[#E0C55C]">اعتماد</span> به من چیه؟</h1>
+
+        <main className="w-full flex flex-col justify-center items-center gap-y-5">
+          <div className="w-96 flex flex-col justify-center items-center gap-y-6">
+            <h1 className="font-semibold text-4xl">کیفیت بالا</h1>
+            <p className="font-extralight text-lg text-center leading-loose">
+              سعی می‌کنم پروژه‌ای که انجام می‌دم به بهترین شکل و کیفیت باشه. پروژه حتی اگر خیلی هم کوچیک باشه، اصلاً سعی نمی‌کنم که فقط سرهمش کنم و تحویل مشتری بدم. یه طوری می‌نویسمش که مشتری اگر خواست تغییری بده و چیزی کم و زیاد کنه، سریع و بدون باگ باشه.
+            </p>
+          </div>
+          <div className="w-full flex justify-between items-center">
+            <div className="w-96 flex flex-col justify-center items-center gap-y-6">
+              <h1 className="font-semibold text-4xl">پشتیبانی و پاسخ گویی</h1>
+              <p className="font-extralight text-lg text-center leading-loose">
+                معمولاً پروژه‌هایی که می‌نویسم باگی نداره که اصلاً نیاز به پشتیبانی و ... باشه. ولی خب اگر مشتری خودش بخواد، می‌تونم مسئولیت پشتیبانیش رو هم برعهده بگیرم. معمولاً اکثر اوقات در دسترس هستم و اگر مشتری نیاز ضروری داشته باشه، سعی می‌کنم کارشو انجام بدم براش حتماً
+              </p>
+            </div>
+            <div>
+              <Image
+                src={WhyTrustMeIMAGE}
+                width={500}
+                height={500}
+              />
+            </div>
+            <div className="w-96 flex flex-col justify-center items-center gap-y-6">
+              <h1 className="font-semibold text-4xl">اصلاحات نامحدود</h1>
+              <p className="font-extralight text-lg text-center leading-loose">
+                مشتری اگر خوب باشه، منم باهاش مشکلی ندارم و هر تغییر و یا امکاناتی که می‌خواد رو می‌تونم براش انجام بدم. همیشه توی تحلیل اولیه سعی می‌کنم پروژه رو بلند مدت در نظر بگیرم که اگر مشتری خواست چیزی بهش اضافه کنه، محدود نباشم توی انجام کار.
+              </p>
+            </div>
+          </div>
+          <div className="w-96 flex flex-col justify-center items-center gap-y-6">
+            <h1 className="font-semibold text-4xl">تحویل به موقع</h1>
+            <p className="font-extralight text-lg text-center leading-loose">
+              سعی می‌کنم که همیشه سر وقت پروژه رو تحویل بدم. بدون باگ و اشکال. اگر تأخیری هم توی کارم پیش اومد، مسئولیتشو برعهده می‌گیرم.
+            </p>
+          </div>
+        </main>
+
+        <div className="-mb-36">
+          <ContinueLine from={"#fff"} to={"#FFE57E"} />
+        </div>
+      </section>
+
+      <Image
+        src={TrustLine2}
+        width={2000}
+        height={1300}
+        className="absolute top-[4000px] left-0 -z-[60]"
+      />
+
+      <section className="w-full flex flex-col justify-between items-center mt-64 gap-y-20">
+        <h1 className="text-4xl font-medium flex flex-col justify-between items-center gap-y-8">
+          روی من میتونید حساب کنید
+          <span className="font-normal text-xl">تخصص ها و دانش هایی که دارم</span>
+        </h1>
+        <div className="w-full flex items-center flex-wrap gap-x-20 gap-y-10 justify-end">
+          <SkillsBtn shadow={'0px 4px 60px 0px rgba(241, 191, 38, 0.05)'} title={'JavaScript'} imageSrc={JavascriptIcon} imageShadow={'0px 4px 60px 0px rgba(241, 191, 38, 0.06)'} />
+
+          <SkillsBtn shadow={'0px 4px 50px 0px rgba(0, 141, 211, 0.07)'} title={'CSS3'} imageSrc={CSS3Icon} imageShadow={'0px 4px 50px 0px rgba(0, 141, 211, 0.06)'} />
+
+          <SkillsBtn shadow={'0px 4px 50px 0px rgba(238, 43, 123, 0.07)'} title={'Responsive Design'} imageSrc={ResponsiveAIcon} imageShadow={'0px 4px 50px 0px rgba(238, 43, 123, 0.06)'} />
+
+          <SkillsBtn shadow={'0px 4px 50px 0px rgba(17, 105, 174, 0.07)'} title={'jQuery'} imageSrc={JqueryIcon} imageShadow={'0px 4px 50px 0px rgba(17, 105, 174, 0.06)'} />
+
+          <SkillsBtn shadow={'0px 4px 50px 0px rgba(228, 77, 38, 0.07)'} title={'HTML5'} imageSrc={HtmlIcon} imageShadow={'0px 4px 50px 0px rgba(228, 77, 38, 0.06)'} />
+
+          <SkillsBtn shadow={'0px 4px 50px 0px rgba(90, 58, 135, 0.07)'} title={'Bootstrap'} imageSrc={BootstrapIcon} imageShadow={'0px 4px 50px 0px rgba(90, 58, 135, 0.06)'} />
+
+          <SkillsBtn shadow={'0px 4px 50px 0px rgba(0, 216, 255, 0.07)'} title={'ReactJS'} imageSrc={ReactIcon} imageShadow={'0px 4px 50px 0px rgba(0, 216, 255, 0.06)'} />
+
+          <SkillsBtn shadow={'0px 4px 50px 0px rgba(0, 216, 255, 0.07)'} title={'React Native'} imageSrc={ReactIcon} imageShadow={'0px 4px 50px 0px rgba(0, 216, 255, 0.06)'} />
+
+          <SkillsBtn shadow={'0px 4px 50px 0px rgba(240, 81, 51, 0.07)'} title={'Git'} imageSrc={gitIcon} imageShadow={'0px 4px 50px 0px rgba(240, 81, 51, 0.06)'} />
+
+          <SkillsBtn shadow={'0px 4px 50px 0px rgba(255, 255, 255, 0.07)'} title={'GitHub'} imageSrc={GithubIcon} imageShadow={'0px 4px 50px 0px rgba(255, 255, 255, 0.06)'} />
+
+          <SkillsBtn shadow={'0px 4px 50px 0px rgba(30, 171, 188, 0.07)'} title={'TailwindCSS'} imageSrc={TailwindIcon} imageShadow={'0px 4px 50px 0px rgba(30, 171, 188, 0.06)'} />
+
+          <SkillsBtn shadow={'0px 4px 50px 0px rgba(205, 103, 154, 0.07)'} title={'Sass'} imageSrc={SassIcon} imageShadow={'0px 4px 50px 0px rgba(205, 103, 154, 0.06)'} />
+
+          <SkillsBtn shadow={'0px 4px 50px 0px rgba(239, 79, 43, 0.07)'} title={'Figma'} imageSrc={FigmaIcon} imageShadow={'0px 4px 50px 0px rgba(239, 79, 43, 0.06)'} />
+
+          <SkillsBtn shadow={'0px 4px 50px 0px rgba(255, 255, 255, 0.07)'} title={'nextJs'} imageSrc={NextjsIcon} imageShadow={'0px 4px 50px 0px rgba(255, 255, 255, 0.06)'} />
+        </div>
       </section>
 
     </div>

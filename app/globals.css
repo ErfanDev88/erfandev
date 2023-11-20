@@ -183,8 +183,23 @@ body {
     #1d1d1d 133.38%
   );
   box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+.workSampleCard:hover{
+  background: linear-gradient(
+    180deg,
+    rgba(56, 56, 56, 0.838),
+    #1d1d1d 133.38%
+  );
 }
 
 .outline-btn{
   box-shadow: 2px 5px 20px 0px rgba(224, 197, 92, 0.10);
+}
+
+.skillBtn{
+  height: 70px;
+  direction: ltr;
+  border-radius: 50px;
+  background: linear-gradient(256deg, #2C2C2C -10.93%, #3D3D3D 112.94%);
 }
