@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="rtl">
       <body
-        className={`${vazirmatn.className} bg-[url('../public/assets/background.png')] bg-no-repeat bg-cover container mx-auto`}
+        className={`${vazirmatn.className} bg-[url('../public/assets/background.png')] bg-no-repeat bg-cover container mx-auto overflow-x-hidden`}
       >
         <WorkSample>
           <Navbar />
