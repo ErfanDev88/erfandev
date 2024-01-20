@@ -4,21 +4,30 @@ import Image from "next/image";
 import logo from "../../public/assets/logo.png";
 import Link from "next/link";
 import OverlayMenu from "./OverlayMenu";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 function Navbar() {
   const [isOverlayOpened, setIsOverlayOpened] = useState(false);
   const overlayHandler = () => {
     setIsOverlayOpened(!isOverlayOpened);
   };
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+  }, []);
 
   return (
     <>
       <nav
-        className={`md:flex w-full flex fixed top-0 right-0 px-8 md:py-0 py-5 md:bg-transparent bg-[#7c683326] md:backdrop-blur-none backdrop-blur-lg md:px-0 md:static justify-between items-center md:mt-8 z-30`}
+        className={`md:flex fixed top-0 backdrop-blur-2xl w-full flex px-8 md:py-0 py-5 md:bg-transparent bg-[#67572a26] md:backdrop-blur-none md:px-64 md:static justify-between items-center md:mt-8 z-30`} data-aos="fade-down"
       >
         <Image
           src={logo}
-          width={230}
+          width={200}
           alt="Erfandev"
           className="cursor-pointer"
         />

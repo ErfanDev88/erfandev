@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #242424
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #c7a754;
+  border-radius: 5px;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,6 +37,10 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .hero {
@@ -185,21 +202,17 @@ body {
   box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease-in-out;
 }
-.workSampleCard:hover{
-  background: linear-gradient(
-    180deg,
-    rgba(56, 56, 56, 0.838),
-    #1d1d1d 133.38%
-  );
+.workSampleCard:hover {
+  background: linear-gradient(180deg, rgba(56, 56, 56, 0.838), #1d1d1d 133.38%);
 }
 
-.outline-btn{
-  box-shadow: 2px 5px 20px 0px rgba(224, 197, 92, 0.10);
+.outline-btn {
+  box-shadow: 2px 5px 20px 0px rgba(224, 197, 92, 0.1);
 }
 
-.skillBtn{
+.skillBtn {
   height: 70px;
   direction: ltr;
   border-radius: 50px;
-  background: linear-gradient(256deg, #2C2C2C -10.93%, #3D3D3D 112.94%);
+  background: linear-gradient(256deg, #2c2c2c -10.93%, #3d3d3d 112.94%);
 }

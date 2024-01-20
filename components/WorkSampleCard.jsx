@@ -2,16 +2,24 @@ import Image from "next/image";
 import React, { useContext } from "react";
 import Btn from "./Btn";
 import { workContext } from "@/app/Context/WorkSample";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 function WorkSampleCard() {
   const cardData = useContext(workContext);
-
+  useEffect(() => {
+    AOS.init({
+         duration: 800,
+         once: false,
+       })
+ }, [])
   return (
     <>
       {cardData.slice(0, 3).map((data) => {
         return (
-            <div className="h-[550px] w-[380px] flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7">
-              <div className="w-full rounded-2xl shadow-xl overflow-hidden">
+            <div data-aos="flip-down" className="h-[550px] w-[380px] flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7">
+              <div className="w-full rounded-2xl shadow-xl overflow-hidden" >
                 <Image
                   src={data.imageSrc}
                   className="w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
