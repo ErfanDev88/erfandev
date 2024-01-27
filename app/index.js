@@ -12,6 +12,26 @@ import webDeveloper from "../public/assets/web-developer.png";
 import Btn from "@/components/Btn";
 import ContinueLine from "@/components/ContinueLine";
 import WorkSampleCard from "@/components/WorkSampleCard";
+import Link from "next/link";
+import WhyTrustMeIMAGE from "@/public/assets/WhyTrustMeIMAGE.png";
+import SkillsBtn from "@/components/SkillsBtn";
+import JavascriptIcon from "@/public/assets/JavascriptIcon.svg";
+import BootstrapIcon from "@/public/assets/BootstrapIcon.svg";
+import CSS3Icon from "@/public/assets/CSS3Icon.svg";
+import FigmaIcon from "@/public/assets/FigmaIcon.svg";
+import GithubIcon from "@/public/assets/GithubIcon.svg";
+import gitIcon from "@/public/assets/gitIcon.svg";
+import HtmlIcon from "@/public/assets/HtmlIcon.svg";
+import JqueryIcon from "@/public/assets/JqueryIcon.svg";
+import NextjsIcon from "@/public/assets/NextjsIcon.svg";
+import ReactIcon from "@/public/assets/ReactIcon.svg";
+import ResponsiveAIcon from "@/public/assets/ResponsiveAIcon.svg";
+import SassIcon from "@/public/assets/SassIcon.svg";
+import TailwindIcon from "@/public/assets/TailwindIcon.svg";
+import footerLaptop from "@/public/assets/footerLaptop.png";
+import AOS from "aos";
+import { useEffect } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 export {
   Image,
@@ -28,4 +48,24 @@ export {
   Btn,
   ContinueLine,
   WorkSampleCard,
+  Link,
+  WhyTrustMeIMAGE,
+  SkillsBtn,
+  JavascriptIcon,
+  BootstrapIcon,
+  CSS3Icon,
+  FigmaIcon,
+  GithubIcon,
+  gitIcon,
+  HtmlIcon,
+  JqueryIcon,
+  NextjsIcon,
+  ReactIcon,
+  ResponsiveAIcon,
+  SassIcon,
+  TailwindIcon,
+  footerLaptop,
+  AOS,
+  useEffect,
+  TypeAnimation,
 };

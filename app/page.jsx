@@ -1,5 +1,5 @@
 "use client";
-import { TypeAnimation } from "react-type-animation";
+import "aos/dist/aos.css";
 import {
   Image,
   navLine,
@@ -15,27 +15,27 @@ import {
   Btn,
   ContinueLine,
   WorkSampleCard,
+  Link,
+  WhyTrustMeIMAGE,
+  SkillsBtn,
+  JavascriptIcon,
+  BootstrapIcon,
+  CSS3Icon,
+  FigmaIcon,
+  GithubIcon,
+  gitIcon,
+  HtmlIcon,
+  JqueryIcon,
+  NextjsIcon,
+  ReactIcon,
+  ResponsiveAIcon,
+  SassIcon,
+  TailwindIcon,
+  footerLaptop,
+  AOS,
+  useEffect,
+  TypeAnimation,
 } from "./index";
-import Link from "next/link";
-import WhyTrustMeIMAGE from "@/public/assets/WhyTrustMeIMAGE.png";
-import SkillsBtn from "@/components/SkillsBtn";
-import JavascriptIcon from "@/public/assets/JavascriptIcon.svg";
-import BootstrapIcon from "@/public/assets/BootstrapIcon.svg";
-import CSS3Icon from "@/public/assets/CSS3Icon.svg";
-import FigmaIcon from "@/public/assets/FigmaIcon.svg";
-import GithubIcon from "@/public/assets/GithubIcon.svg";
-import gitIcon from "@/public/assets/gitIcon.svg";
-import HtmlIcon from "@/public/assets/HtmlIcon.svg";
-import JqueryIcon from "@/public/assets/JqueryIcon.svg";
-import NextjsIcon from "@/public/assets/NextjsIcon.svg";
-import ReactIcon from "@/public/assets/ReactIcon.svg";
-import ResponsiveAIcon from "@/public/assets/ResponsiveAIcon.svg";
-import SassIcon from "@/public/assets/SassIcon.svg";
-import TailwindIcon from "@/public/assets/TailwindIcon.svg";
-import footerLaptop from "@/public/assets/footerLaptop.png";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
@@ -426,13 +426,19 @@ export default function Home() {
       </section>
 
       <footer className="w-full md:flex-row flex flex-col justify-between items-center border-[#FFE57E] border-t mt-20 gap-y-20 md:gap-0 mb-10">
-        <div className="flex flex-col justify-center items-center" data-aos="fade-left">
+        <div
+          className="flex flex-col justify-center items-center"
+          data-aos="fade-left"
+        >
           <Image src={footerLaptop} className="md:w-[450px]" />
           <h1 className="text-3xl font-medium md:-mt-7">
             برنامه نویس وب و طراح UI & UX
           </h1>
         </div>
-        <div className="flex flex-col gap-y-8 justify-center items-center" data-aos="fade-up">
+        <div
+          className="flex flex-col gap-y-8 justify-center items-center"
+          data-aos="fade-up"
+        >
           <h1 className="text-3xl font-semibold">لینک های مفید</h1>
           <ul className="flex flex-col justify-center items-center gap-y-4">
             <Link
@@ -461,7 +467,10 @@ export default function Home() {
             </Link>
           </ul>
         </div>
-        <div className="flex flex-col gap-y-14 justify-center items-center" data-aos="fade-right">
+        <div
+          className="flex flex-col gap-y-14 justify-center items-center"
+          data-aos="fade-right"
+        >
           <h1 className="text-3xl font-semibold">تماس با من</h1>
           <div className="flex justify-between items-center gap-x-10 md:flex-col md:items-end md:gap-x-0 md:gap-y-10">
             <div className="flex justify-center items-center gap-x-2">
