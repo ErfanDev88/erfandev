@@ -18,7 +18,7 @@ function WorkSampleCard() {
     <>
       {cardData.slice(0, 3).map((data) => {
         return (
-            <div data-aos="flip-down" className="h-[550px] w-[380px] flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7">
+            <div data-aos="flip-down" className="h-[550px] md:w-[380px] w-[300px] flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7">
               <div className="w-full rounded-2xl shadow-xl overflow-hidden" >
                 <Image
                   src={data.imageSrc}

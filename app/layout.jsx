@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`font-[Vazirmatn] bg-[url('../public/assets/background.png')] bg-no-repeat bg-cover overflow-x-hidden flex flex-col justify-center items-center`}
+        className={`font-[Vazirmatn] bg-[url('../public/assets/background.png')] bg-no-repeat bg-cover overflow-x-hidden flex flex-col justify-center items-center relative`}
       >
         <WorkSample>
           <Navbar />

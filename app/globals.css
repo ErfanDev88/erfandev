@@ -15,6 +15,7 @@ html::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

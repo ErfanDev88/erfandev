@@ -55,7 +55,7 @@ export default function Home() {
       />
       <section
         data-aos="zoom-in"
-        className="w-[90%] flex flex-col md:flex-row justify-between items-center rounded-[60px] p-16 hero md:mt-16 mt-28 gap-y-12 md:gap-y-0"
+        className="w-[90%] flex flex-col md:flex-row justify-between items-center rounded-[60px] md:p-16 p-10 hero md:mt-16 mt-28 gap-y-12 md:gap-y-0"
       >
         <div className="w-full md:w-[40%] flex flex-col justify-between md:items-start items-center md:gap-y-10 gap-y-8 order-1 md:order-none ">
           <TypeAnimation
@@ -288,13 +288,13 @@ export default function Home() {
       />
 
       <section className="w-full flex flex-col justify-between items-center mt-64 gap-y-20">
-        <h1 className="text-4xl font-medium flex flex-col justify-between items-center gap-y-8">
+        <h1 className="text-4xl font-medium flex flex-col justify-between items-center gap-y-8 text-center">
           روی من میتونید حساب کنید
-          <span className="font-normal text-xl">
+          <span className="font-normal text-xl text-center">
             تخصص ها و دانش هایی که دارم
           </span>
         </h1>
-        <div className="w-full flex items-center flex-wrap gap-x-20 gap-y-10 md:justify-end justify-center">
+        <div className="w-full flex items-center flex-wrap gap-x-20 gap-y-10 md:justify-end justify-center md:px-0">
           <div data-aos="flip-down">
             <SkillsBtn
               shadow={"0px 4px 60px 0px rgba(241, 191, 38, 0.05)"}
@@ -431,7 +431,7 @@ export default function Home() {
           data-aos="fade-left"
         >
           <Image src={footerLaptop} className="md:w-[450px]" />
-          <h1 className="text-3xl font-medium md:-mt-7">
+          <h1 className="text-3xl font-medium md:-mt-7  text-center">
             برنامه نویس وب و طراح UI & UX
           </h1>
         </div>
@@ -468,11 +468,10 @@ export default function Home() {
           </ul>
         </div>
         <div
-          className="flex flex-col gap-y-14 justify-center items-center"
-          data-aos="fade-right"
+          className="flex flex-col gap-y-14 justify-center items-center "
         >
           <h1 className="text-3xl font-semibold">تماس با من</h1>
-          <div className="flex justify-between items-center gap-x-10 md:flex-col md:items-end md:gap-x-0 md:gap-y-10">
+          <div className="flex justify-between flex-col items-end gap-y-10">
             <div className="flex justify-center items-center gap-x-2">
               <Link
                 href={"/"}

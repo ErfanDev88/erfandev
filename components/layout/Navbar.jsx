@@ -4,8 +4,8 @@ import Image from "next/image";
 import logo from "../../public/assets/logo.png";
 import Link from "next/link";
 import OverlayMenu from "./OverlayMenu";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 function Navbar() {
@@ -21,9 +21,10 @@ function Navbar() {
   }, []);
 
   return (
-    <>
+    <div className="md:px-0 px-32 w-full">
       <nav
-        className={`md:flex fixed top-0 backdrop-blur-2xl w-full flex px-8 md:py-0 py-5 md:bg-transparent bg-[#67572a26] md:backdrop-blur-none md:px-64 md:static justify-between items-center md:mt-8 z-30`} data-aos="fade-down"
+        className={`md:flex md:w-full fixed top-0 backdrop-blur-2xl flex px-8 md:py-0 py-5 md:bg-transparent bg-[#67572a26] md:backdrop-blur-none md:px-64 md:static justify-between items-center md:mt-8 gap-x-10 z-30 rounded-b-xl`}
+        data-aos="fade-down"
       >
         <Image
           src={logo}
@@ -33,17 +34,157 @@ function Navbar() {
         />
 
         <ul className="md:flex hidden justify-center items-center gap-x-16">
-          <li className="font-extralight text-xl transition-all duration-200 hover:font-normal cursor-pointer">
+          <li className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="opacity-70 "
+            >
+              <path
+                d="M9.02 2.83992L3.63 7.03992C2.73 7.73992 2 9.22992 2 10.3599V17.7699C2 20.0899 3.89 21.9899 6.21 21.9899H17.79C20.11 21.9899 22 20.0899 22 17.7799V10.4999C22 9.28992 21.19 7.73992 20.2 7.04992L14.02 2.71992C12.62 1.73992 10.37 1.78992 9.02 2.83992Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 17.99V14.99"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
             خانه
           </li>
-          <li className="font-extralight text-xl transition-all duration-200 hover:font-normal cursor-pointer">
+          <li className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="opacity-70"
+            >
+              <path
+                d="M7.49998 10.8333C6.94998 11.1083 6.49164 11.5166 6.14998 12.0249C5.95831 12.3166 5.95831 12.6833 6.14998 12.9749C6.49164 13.4833 6.94998 13.8916 7.49998 14.1666"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12.675 10.8333C13.225 11.1083 13.6834 11.5166 14.025 12.0249C14.2167 12.3166 14.2167 12.6833 14.025 12.9749C13.6834 13.4833 13.225 13.8916 12.675 14.1666"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M7.49996 18.3334H12.5C16.6666 18.3334 18.3333 16.6667 18.3333 12.5001V7.50008C18.3333 3.33341 16.6666 1.66675 12.5 1.66675H7.49996C3.33329 1.66675 1.66663 3.33341 1.66663 7.50008V12.5001C1.66663 16.6667 3.33329 18.3334 7.49996 18.3334Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M1.85828 6.67508L17.8749 6.66675"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
             نمونه کارها
           </li>
-          <li className="font-extralight text-xl transition-all duration-200 hover:font-normal cursor-pointer">
+          <li className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
+            <svg
+              className="opacity-70"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.3333 1.66675H6.66666C3.33332 1.66675 1.66666 3.33341 1.66666 6.66675V17.5001C1.66666 17.9584 2.04166 18.3334 2.49999 18.3334H13.3333C16.6667 18.3334 18.3333 16.6667 18.3333 13.3334V6.66675C18.3333 3.33341 16.6667 1.66675 13.3333 1.66675Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M5.83334 7.91675H14.1667"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M5.83334 12.0835H11.6667"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
             مقالات
           </li>
-          <li className="font-extralight text-xl transition-all duration-200 hover:font-normal cursor-pointer">
+          <li className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="opacity-70"
+            >
+              <path
+                d="M18.3084 15.2751C18.3084 15.5751 18.2417 15.8834 18.1001 16.1834C17.9584 16.4834 17.7751 16.7667 17.5334 17.0334C17.1251 17.4834 16.6751 17.8084 16.1667 18.0167C15.6667 18.2251 15.1251 18.3334 14.5417 18.3334C13.6917 18.3334 12.7834 18.1334 11.8251 17.7251C10.8667 17.3167 9.90842 16.7667 8.95842 16.0751C8.00008 15.3751 7.09175 14.6001 6.22508 13.7417C5.36675 12.8751 4.59175 11.9667 3.90008 11.0167C3.21675 10.0667 2.66675 9.11675 2.26675 8.17508C1.86675 7.22508 1.66675 6.31675 1.66675 5.45008C1.66675 4.88341 1.76675 4.34175 1.96675 3.84175C2.16675 3.33341 2.48341 2.86675 2.92508 2.45008C3.45841 1.92508 4.04175 1.66675 4.65841 1.66675C4.89175 1.66675 5.12508 1.71675 5.33341 1.81675C5.55008 1.91675 5.74175 2.06675 5.89175 2.28341L7.82508 5.00842C7.97508 5.21675 8.08341 5.40841 8.15841 5.59175C8.23341 5.76675 8.27508 5.94175 8.27508 6.10008C8.27508 6.30008 8.21675 6.50008 8.10008 6.69175C7.99175 6.88341 7.83341 7.08341 7.63341 7.28341L7.00008 7.94175C6.90841 8.03341 6.86675 8.14175 6.86675 8.27508C6.86675 8.34175 6.87508 8.40008 6.89175 8.46675C6.91675 8.53341 6.94175 8.58341 6.95842 8.63341C7.10842 8.90841 7.36675 9.26675 7.73341 9.70008C8.10841 10.1334 8.50841 10.5751 8.94175 11.0167C9.39175 11.4584 9.82508 11.8667 10.2667 12.2417C10.7001 12.6084 11.0584 12.8584 11.3417 13.0084C11.3834 13.0251 11.4334 13.0501 11.4917 13.0751C11.5584 13.1001 11.6251 13.1084 11.7001 13.1084C11.8417 13.1084 11.9501 13.0584 12.0417 12.9667L12.6751 12.3417C12.8834 12.1334 13.0834 11.9751 13.2751 11.8751C13.4667 11.7584 13.6584 11.7001 13.8667 11.7001C14.0251 11.7001 14.1917 11.7334 14.3751 11.8084C14.5584 11.8834 14.7501 11.9917 14.9584 12.1334L17.7167 14.0917C17.9334 14.2417 18.0834 14.4167 18.1751 14.6251C18.2584 14.8334 18.3084 15.0417 18.3084 15.2751Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+              />
+            </svg>
             ارتباط با من
+          </li>
+          <li className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2 ">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="opacity-70"
+            >
+              <path
+                d="M10.1001 10.65C10.0417 10.6417 9.96672 10.6417 9.90006 10.65C8.43339 10.6 7.26672 9.39998 7.26672 7.92498C7.26672 6.41665 8.48339 5.19165 10.0001 5.19165C11.5084 5.19165 12.7334 6.41665 12.7334 7.92498C12.7251 9.39998 11.5667 10.6 10.1001 10.65Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.6166 16.15C14.1333 17.5084 12.1666 18.3334 9.99997 18.3334C7.8333 18.3334 5.86663 17.5084 4.3833 16.15C4.46663 15.3667 4.96663 14.6 5.8583 14C8.14163 12.4834 11.875 12.4834 14.1416 14C15.0333 14.6 15.5333 15.3667 15.6166 16.15Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9.99996 18.3333C14.6023 18.3333 18.3333 14.6023 18.3333 9.99996C18.3333 5.39759 14.6023 1.66663 9.99996 1.66663C5.39759 1.66663 1.66663 5.39759 1.66663 9.99996C1.66663 14.6023 5.39759 18.3333 9.99996 18.3333Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            درباره من
           </li>
         </ul>
 
@@ -206,7 +347,7 @@ function Navbar() {
         </button>
       </nav>
       {isOverlayOpened ? <OverlayMenu /> : ""}
-    </>
+    </div>
   );
 }
 
