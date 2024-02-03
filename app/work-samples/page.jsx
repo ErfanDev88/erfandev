@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import navLine from "../../public/assets/Lines/navbar.png";
 import Link from "next/link";
-import { WorkSampleCard } from "..";
+// import { WorkSampleCard } from "..";
 
 function page() {
   return (
@@ -17,7 +17,7 @@ function page() {
       <section className="w-full rounded-2xl md:rounded-none md:w-[119.8%] bg-[#A58A44] flex flex-col justify-between items-center gap-y-14 lg:w-[145%] py-10">
         <h1 className="font-medium text-3xl">نمونه کار های من</h1>
         <div className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8">
-            <WorkSampleCard />
+            {/* <WorkSampleCard /> */}
         </div>
         <Link
           href={"/"}
