@@ -399,6 +399,11 @@
   resolved "https://registry.npmjs.org/@vercel/ruby/-/ruby-2.0.5.tgz"
   integrity sha512-Gfm8HDech41vf+EPleRzgoJUnDTJerKgckMm4KX0JT860gV9XBMSOWYH7eMWHmMza104+HRCWL7wT6OlpftF2Q==
 
+"@vercel/speed-insights@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.npmjs.org/@vercel/speed-insights/-/speed-insights-1.0.9.tgz"
+  integrity sha512-f+XFP0O+aZ4Olj9h+BitkB1b4NJQaxtyCb69wWuDxytJHY6Pa4QtZPdBUftHOcajUCHRVeq062fk3MKXKtjNVQ==
+
 "@vercel/static-build@2.2.0":
   version "2.2.0"
   resolved "https://registry.npmjs.org/@vercel/static-build/-/static-build-2.2.0.tgz"
@@ -1420,7 +1425,7 @@ next-studio@^0.1.0:
   resolved "https://registry.npmjs.org/next-studio/-/next-studio-0.1.0.tgz"
   integrity sha512-2fMTGxA6kDR2MpmVI9kk1V4ANyVLv4vFy60o+qyWfzp3KgwlEE0iN+MQLznG+yl8m2p5AB76IQxVUZk4EAHORw==
 
-next@^13.5.6:
+next@^13.5.6, "next@>= 13":
   version "13.5.6"
   resolved "https://registry.npmjs.org/next/-/next-13.5.6.tgz"
   integrity sha512-Y2wTcTbO4WwEsVb4A8VSnOsG1I9ok+h74q0ZdxkwM3EODqrs4pasq7O0iUxbcS9VtWMicG7f3+HAj0r1+NtKSw==
@@ -1754,7 +1759,7 @@ react-type-animation@^3.1.0:
   resolved "https://registry.npmjs.org/react-type-animation/-/react-type-animation-3.1.0.tgz"
   integrity sha512-Ju74SpUFpSINqlGU8UeFAF+AnAn0nZcc8MB0Ho6QvRkh8uDKkOzAiMD3l9xEmkbKXnSYsljfVgIDM/zwqEImpQ==
 
-react@^18.0.0, react@^18.2.0, "react@>= 15.0.0", "react@>= 15.4.1 < 17.0.0-0", "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@18.2.0:
+"react@^18 || ^19", react@^18.0.0, react@^18.2.0, "react@>= 15.0.0", "react@>= 15.4.1 < 17.0.0-0", "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
