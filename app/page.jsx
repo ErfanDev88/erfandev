@@ -36,8 +36,12 @@ import {
   useEffect,
   TypeAnimation,
 } from "./index";
+import { useContext } from "react";
+import { workContext } from "./Context/WorkSample";
 
 export default function Home() {
+  const cardData = useContext(workContext);
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -162,7 +166,26 @@ export default function Home() {
 
         <h1 className="font-medium text-3xl">آخرین نمونه کار ها</h1>
         <div className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8">
-          <WorkSampleCard />
+          {cardData.slice(0, 3).map((data) => {
+            return (
+              <div
+                data-aos="flip-down"
+                className="h-[550px] md:w-[380px] w-[300px] flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7"
+              >
+                <div className="w-full rounded-2xl shadow-xl overflow-hidden">
+                  <Image
+                    src={data.imageSrc}
+                    className="w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
+                  />
+                </div>
+                <h1 className="text-3xl font-bold">{data.title}</h1>
+                <p className="text-2xl font-extralight text-center">
+                  {data.description}
+                </p>
+                <Btn title={data.btnTitle} href={data.btnHref} />
+              </div>
+            );
+          })}
         </div>
         <Link
           href={"/"}
@@ -467,9 +490,7 @@ export default function Home() {
             </Link>
           </ul>
         </div>
-        <div
-          className="flex flex-col gap-y-14 justify-center items-center "
-        >
+        <div className="flex flex-col gap-y-14 justify-center items-center ">
           <h1 className="text-3xl font-semibold">تماس با من</h1>
           <div className="flex justify-between flex-col items-end gap-y-10">
             <div className="flex justify-center items-center gap-x-2">

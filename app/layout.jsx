@@ -2,6 +2,7 @@ import "./globals.css";
 import WorkSample from "./Context/WorkSample";
 import Navbar from "@/components/layout/Navbar";
 import ScroolUpBtn from "@/components/ScroolUpBtn";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "عرفان رضایی | Erfandev",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
         <WorkSample>
           <Navbar />
           {children}
+          <Analytics />
           <ScroolUpBtn />
         </WorkSample>
       </body>
