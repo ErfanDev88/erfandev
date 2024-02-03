@@ -6,11 +6,11 @@ import Link from "next/link";
 import { workContext } from "../Context/WorkSample";
 import { Btn } from "..";
 
-function workSamples() {
+export default function workSamples() {
   const cardData = useContext(workContext);
 
   return (
-    <div className="container mx-auto w-full flex flex-col items-center justify-center mt-40 relative">
+    <div className="container mx-auto w-full flex flex-col items-center justify-center mt-20 relative">
       <Image
         src={navLine}
         width={1700}
@@ -19,7 +19,7 @@ function workSamples() {
       />
       <section className="w-full rounded-2xl md:rounded-none md:w-[119.8%] bg-[#A58A44] flex flex-col justify-between items-center gap-y-14 lg:w-[145%] py-10">
         <h1 className="font-medium text-3xl">نمونه کار های من</h1>
-        <div className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8">
+        <div className="md:w-[85%] flex flex-col md:flex-wrap md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8">
           {cardData.map((data) => {
             return (
               <article
@@ -51,5 +51,3 @@ function workSamples() {
     </div>
   );
 }
-
-export default workSamples;

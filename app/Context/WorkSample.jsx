@@ -16,6 +16,13 @@ function WorkSample({ children }) {
       btnHref: "https://dribbble.com/shots/22265792-Toyota-Supra-MK4",
     },
     {
+      imageSrc: supra,
+      title: "معرفی سوپرا MK4",
+      description: "یه سایت برای معرفی ماشین رویایی Supra MK4",
+      btnTitle: " مشاهده در Dribbble",
+      btnHref: "https://dribbble.com/shots/22265792-Toyota-Supra-MK4",
+    },
+    {
       imageSrc: messengerApp,
       title: "سایت پیام رسان",
       description: "طراحی یک سایت پیام رسان",

@@ -11,7 +11,6 @@ import designer from "../public/assets/designer.png";
 import webDeveloper from "../public/assets/web-developer.png";
 import Btn from "@/components/Btn";
 import ContinueLine from "@/components/ContinueLine";
-import WorkSampleCard from "@/components/WorkSampleCard";
 import Link from "next/link";
 import WhyTrustMeIMAGE from "@/public/assets/WhyTrustMeIMAGE.png";
 import SkillsBtn from "@/components/SkillsBtn";
@@ -47,7 +46,6 @@ export {
   webDeveloper,
   Btn,
   ContinueLine,
-  WorkSampleCard,
   Link,
   WhyTrustMeIMAGE,
   SkillsBtn,
