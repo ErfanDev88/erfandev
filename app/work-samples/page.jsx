@@ -1,11 +1,14 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useContext } from "react";
 import navLine from "../../public/assets/Lines/navbar.png";
 import Link from "next/link";
-// import { WorkSampleCard } from "..";
+import { workContext } from "../Context/WorkSample";
+import { Btn } from "..";
 
-function page() {
+function workSamples() {
+  const cardData = useContext(workContext);
+
   return (
     <div className="container mx-auto w-full flex flex-col items-center justify-center mt-40 relative">
       <Image
@@ -17,7 +20,26 @@ function page() {
       <section className="w-full rounded-2xl md:rounded-none md:w-[119.8%] bg-[#A58A44] flex flex-col justify-between items-center gap-y-14 lg:w-[145%] py-10">
         <h1 className="font-medium text-3xl">نمونه کار های من</h1>
         <div className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8">
-            {/* <WorkSampleCard /> */}
+          {cardData.map((data) => {
+            return (
+              <article
+                data-aos="flip-down"
+                className="h-[550px] md:w-[380px] w-[300px] flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7"
+              >
+                <div className="w-full rounded-2xl shadow-xl overflow-hidden">
+                  <Image
+                    src={data.imageSrc}
+                    className="w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
+                  />
+                </div>
+                <h1 className="text-3xl font-bold">{data.title}</h1>
+                <p className="text-2xl font-extralight text-center">
+                  {data.description}
+                </p>
+                <Btn title={data.btnTitle} href={data.btnHref} />
+              </article>
+            );
+          })}
         </div>
         <Link
           href={"/"}
@@ -30,4 +52,4 @@ function page() {
   );
 }
 
-export default page;
+export default workSamples;
