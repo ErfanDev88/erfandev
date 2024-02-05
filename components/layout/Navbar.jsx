@@ -13,6 +13,7 @@ function Navbar() {
   const overlayHandler = () => {
     setIsOverlayOpened(!isOverlayOpened);
   };
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -21,9 +22,9 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="md:px-0 px-32 w-full">
+    <div className="md:px-0 px-20 w-full justify-center items-center">
       <nav
-        className={`md:flex md:w-full fixed top-0 backdrop-blur-2xl flex px-8 md:py-0 py-5 md:bg-transparent bg-[#67572a26] md:backdrop-blur-none md:px-64 md:static justify-between items-center md:mt-8 gap-x-10 z-30 rounded-b-xl`}
+        className={`md:flex md:w-full fixed top-0 left-10 backdrop-blur-2xl flex px-8 md:py-0 py-5 md:bg-transparent bg-[#67572a26] md:backdrop-blur-none md:px-64 md:static justify-between items-center md:mt-8 gap-x-10 z-30 rounded-b-xl`}
         data-aos="fade-down"
       >
         <Image

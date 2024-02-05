@@ -10,7 +10,7 @@ export default function workSamples() {
   const cardData = useContext(workContext);
 
   return (
-    <div className="container mx-auto w-full flex flex-col items-center justify-center mt-20 relative">
+    <div className="container mx-auto w-full flex flex-col items-center justify-center mt-40 md:mt-20 relative">
       <Image
         src={navLine}
         width={1700}

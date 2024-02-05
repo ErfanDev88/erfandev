@@ -38,9 +38,11 @@ import {
 } from "./index";
 import { useContext } from "react";
 import { workContext } from "./Context/WorkSample";
+import { blogContext } from "./Context/Blog";
 
 export default function Home() {
   const cardData = useContext(workContext);
+  const blogData = useContext(blogContext);
 
   useEffect(() => {
     AOS.init({
@@ -205,11 +207,36 @@ export default function Home() {
         className="absolute top-[3000px] left-0 -z-[60]"
       />
 
-      <section className="mt-52">
-        <h1>blog</h1>
-        <h1>blog</h1>
-        <h1>blog</h1>
-        <h1>blog</h1>
+      <section className="mt-52 w-full justify-between items-center flex flex-col gap-y-14">
+        <h1 className="font-medium text-3xl">مقاله ها</h1>
+        <div className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8 md:w-full md:px-10 md:justify-between">
+          {blogData.slice(0, 2).map((data) => {
+            return (
+              <div
+                data-aos="flip-down"
+                className="md:w-[490px] w-[300px] flex flex-col justify-between items-center rounded-2xl workSampleCard px-4 py-8 gap-y-7"
+              >
+                <div className="w-[86%] rounded-2xl shadow-xl overflow-hidden">
+                  <Image
+                    src={data.imageSrc}
+                    className="w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
+                  />
+                </div>
+                <h1 className="text-3xl font-bold">{data.title}</h1>
+                <p className="w-[80%] text-xl font-extralight text-center leading-relaxed">
+                  {data.description}
+                </p>
+                <Btn title={data.btnTitle} href={data.btnHref} />
+              </div>
+            );
+          })}
+        </div>
+        <Link
+          href={"/"}
+          className={`outline-btn rounded-2xl text-[#E0C55C] border border-[#ffe57e4d] bg-transparent py-4 px-6 text-xl font-medium hover:text-[#fff] relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-[#c7ad4c] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0`}
+        >
+          مقاله های بیشتر
+        </Link>
         <div className="-mb-36">
           <ContinueLine from={"#FFE57E"} to={"#fff"} />
         </div>

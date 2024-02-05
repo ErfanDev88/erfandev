@@ -5,11 +5,11 @@ import Link from "next/link";
 
 function OverlayMenu() {
   return (
-    <nav className="md:hidden w-[70%] h-screen flex flex-col justify-between items-center overlay-menu fixed right-0 top-0 z-40 backdrop-blur-xl py-10 duration-200 transition-all">
+    <nav className="md:hidden w-[60%] h-screen flex flex-col justify-between items-center overlay-menu fixed right-20 top-0 z-40 backdrop-blur-xl py-10 duration-200 transition-all">
       <Image src={logo} width={230} alt="Erfandev" className="cursor-pointer" />
 
       <ul className="flex flex-col justify-center items-center gap-y-8">
-        <li className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
+        <Link href={'/'} className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
           <svg
             width="20"
             height="20"
@@ -34,8 +34,8 @@ function OverlayMenu() {
             />
           </svg>
           خانه
-        </li>
-        <li className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
+        </Link>
+        <Link href={"/work-samples"} className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
           <svg
             width="20"
             height="20"
@@ -74,8 +74,8 @@ function OverlayMenu() {
             />
           </svg>
           نمونه کارها
-        </li>
-        <li className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
+        </Link>
+        <Link href={'/blogs'} className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
           <svg
             className="opacity-70"
             width="20"
@@ -109,8 +109,8 @@ function OverlayMenu() {
             />
           </svg>
           مقالات
-        </li>
-        <li className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
+        </Link>
+        <Link href={'/contact-us'} className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
           <svg
             width="22"
             height="22"
@@ -127,7 +127,7 @@ function OverlayMenu() {
             />
           </svg>
           ارتباط با من
-        </li>
+        </Link>
         <li className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2 ">
           <svg
             width="20"

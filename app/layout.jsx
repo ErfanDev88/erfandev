@@ -3,7 +3,8 @@ import WorkSample from "./Context/WorkSample";
 import Navbar from "@/components/layout/Navbar";
 import ScroolUpBtn from "@/components/ScroolUpBtn";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Blog from "./Context/Blog";
 
 export const metadata = {
   title: "عرفان رضایی | Erfandev",
@@ -26,11 +27,13 @@ export default function RootLayout({ children }) {
         className={`font-[Vazirmatn] bg-[url('../public/assets/background.png')] bg-no-repeat bg-cover overflow-x-hidden flex flex-col justify-center items-center relative`}
       >
         <WorkSample>
-          <Navbar />
-          {children}
-          <Analytics />
-          <SpeedInsights />
-          <ScroolUpBtn />
+          <Blog>
+            <Navbar />
+            {children}
+            <Analytics />
+            <SpeedInsights />
+            <ScroolUpBtn />
+          </Blog>
         </WorkSample>
       </body>
     </html>
