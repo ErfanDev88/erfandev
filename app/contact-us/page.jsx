@@ -201,6 +201,25 @@ export default function contactUs() {
               />
             </svg>
           </Link>
+          <Link
+            href={"https://www.linkedin.com/in/erfan-rezaie-4825a92aa/"}
+            className="font-extralight tracking-wider text-lg hover:text-[#ecda90] transition-all duration-200 flex justify-between items-center gap-x-2"
+          >
+            Linkedin.com - Erfandev88
+            <svg
+              width="23"
+              height="22"
+              viewBox="0 0 23 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.22006 21.9995V7.1556H0.290561V21.9995H5.22058H5.22006ZM2.75634 5.12926C4.475 5.12926 5.54498 3.98943 5.54498 2.56495C5.51281 1.10802 4.475 0 2.78902 0C1.10189 0 0 1.10802 0 2.56482C0 3.9893 1.06959 5.12913 2.72404 5.12913H2.75595L2.75634 5.12926ZM7.94861 21.9995H12.8777V13.7109C12.8777 13.2678 12.9099 12.8236 13.0401 12.5072C13.3963 11.6204 14.2074 10.7025 15.5695 10.7025C17.3527 10.7025 18.0665 12.0636 18.0665 14.0593V21.9995H22.9955V13.4885C22.9955 8.92923 20.5639 6.80759 17.3208 6.80759C14.6619 6.80759 13.4941 8.29505 12.8453 9.30815H12.8781V7.15611H7.94886C8.0132 8.54864 7.94848 22 7.94848 22L7.94861 21.9995Z"
+                fill="white"
+                fill-opacity="0.7"
+              />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>

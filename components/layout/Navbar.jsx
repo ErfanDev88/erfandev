@@ -27,15 +27,16 @@ function Navbar() {
         className={`md:flex md:w-full fixed top-0 left-10 backdrop-blur-2xl flex px-8 md:py-0 py-5 md:bg-transparent bg-[#67572a26] md:backdrop-blur-none md:px-64 md:static justify-between items-center md:mt-8 gap-x-10 z-30 rounded-b-xl`}
         data-aos="fade-down"
       >
-        <Image
-          src={logo}
-          width={200}
-          alt="Erfandev"
-          className="cursor-pointer"
-        />
-
+        <Link href={"/"}>
+          <Image
+            src={logo}
+            width={200}
+            alt="Erfandev"
+            className="cursor-pointer"
+          />
+        </Link>
         <ul className="md:flex hidden justify-center items-center gap-x-16">
-          <li className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
+          <Link href={"/"} className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
             <svg
               width="20"
               height="20"
@@ -60,8 +61,11 @@ function Navbar() {
               />
             </svg>
             خانه
-          </li>
-          <li className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
+          </Link>
+          <Link
+            href={"/work-samples"}
+            className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2"
+          >
             <svg
               width="20"
               height="20"
@@ -100,8 +104,11 @@ function Navbar() {
               />
             </svg>
             نمونه کارها
-          </li>
-          <li className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
+          </Link>
+          <Link
+            href={"/blogs"}
+            className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2"
+          >
             <svg
               className="opacity-70"
               width="20"
@@ -135,8 +142,8 @@ function Navbar() {
               />
             </svg>
             مقالات
-          </li>
-          <li className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
+          </Link>
+          <Link href={"/contact-us"} className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
             <svg
               width="22"
               height="22"
@@ -153,8 +160,8 @@ function Navbar() {
               />
             </svg>
             ارتباط با من
-          </li>
-          <li className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2 ">
+          </Link>
+          <Link href={"about"} className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2 ">
             <svg
               width="20"
               height="20"
@@ -186,7 +193,7 @@ function Navbar() {
               />
             </svg>
             درباره من
-          </li>
+          </Link>
         </ul>
 
         <button class="btn-cssbuttons btn md:flex hidden">
@@ -252,23 +259,18 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href="https://wa.me/989393321803">
+              <Link href="https://t.me/+989393321803">
                 <svg
                   width="25"
-                  height="25"
-                  viewBox="0 0 28 28"
+                  height="22"
+                  viewBox="0 0 26 22"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M0 27.0522L1.94094 19.8418C0.37562 17.0329 -0.121697 13.7553 0.540245 10.6102C1.20219 7.46515 2.97898 4.66368 5.54459 2.71986C8.1102 0.776039 11.2925 -0.179734 14.5076 0.0279243C17.7227 0.235582 20.7549 1.59274 23.0477 3.85036C25.3406 6.10798 26.7403 9.11463 26.9901 12.3186C27.2399 15.5225 26.3229 18.7088 24.4075 21.2929C22.4921 23.8769 19.7067 25.6853 16.5624 26.3862C13.4182 27.0871 10.126 26.6335 7.28997 25.1086L0 27.0522ZM7.64148 22.4104L8.09233 22.6772C10.1465 23.8917 12.5458 24.3942 14.9162 24.1066C17.2867 23.8189 19.4951 22.7572 21.1975 21.0869C22.8998 19.4166 24.0004 17.2315 24.3277 14.8721C24.655 12.5127 24.1906 10.1116 23.007 8.043C21.8234 5.97435 19.9869 4.35435 17.7839 3.43546C15.5808 2.51656 13.1349 2.35038 10.8272 2.96282C8.51962 3.57526 6.47991 4.93192 5.02599 6.82137C3.57206 8.71082 2.78559 11.0269 2.78914 13.4088C2.78721 15.3837 3.33479 17.3204 4.37093 19.0034L4.65366 19.4683L3.56857 23.4927L7.64148 22.4104Z"
-                    fill="#fff"
-                  />
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M18.5838 15.2602C18.3195 15.0476 18.0101 14.8979 17.679 14.8226C17.348 14.7474 17.004 14.7484 16.6735 14.8258C16.1768 15.0316 15.8558 15.809 15.5349 16.1977C15.4672 16.2909 15.3678 16.3563 15.2552 16.3815C15.1427 16.4068 15.0247 16.3902 14.9236 16.3349C13.1051 15.6245 11.5809 14.3218 10.5985 12.6382C10.5147 12.5332 10.475 12.3998 10.4879 12.2662C10.5007 12.1325 10.565 12.0091 10.6673 11.9218C11.0252 11.5683 11.288 11.1305 11.4314 10.6489C11.4632 10.1176 11.3412 9.58847 11.0799 9.12448C10.8779 8.47398 10.4934 7.89475 9.97188 7.45525C9.7029 7.33458 9.40466 7.29412 9.11314 7.33875C8.82162 7.38338 8.54927 7.5112 8.32896 7.70678C7.94648 8.03593 7.64289 8.44647 7.44055 8.90815C7.23821 9.36984 7.14228 9.87092 7.15981 10.3745C7.16099 10.6573 7.19692 10.9389 7.26679 11.2129C7.44423 11.8714 7.71711 12.5005 8.07679 13.0803C8.33629 13.5245 8.61943 13.9545 8.92499 14.3684C9.91804 15.7282 11.1663 16.8827 12.6005 17.7679C13.3203 18.2177 14.0895 18.5834 14.893 18.8578C15.7277 19.2352 16.6493 19.3801 17.5599 19.277C18.0787 19.1987 18.5703 18.9944 18.9913 18.682C19.4124 18.3697 19.7501 17.9589 19.9746 17.4859C20.1065 17.2001 20.1465 16.8806 20.0892 16.5712C19.9517 15.9386 19.1034 15.5651 18.5838 15.2602Z"
-                    fill="#fff"
+                    d="M1.58946 9.58105C1.58946 9.58105 13.0558 4.75164 17.0325 3.05109C18.5569 2.37092 23.7267 0.194203 23.7267 0.194203C23.7267 0.194203 26.1128 -0.758029 25.9139 1.55463C25.8476 2.50695 25.3174 5.83991 24.7872 9.44502C23.9918 14.5466 23.1302 20.1242 23.1302 20.1242C23.1302 20.1242 22.9976 21.6888 21.8709 21.9608C20.7442 22.2329 18.8883 21.0086 18.5569 20.7364C18.2917 20.5324 13.586 17.4714 11.8627 15.975C11.3987 15.5669 10.8685 14.7507 11.9289 13.7984C14.315 11.5537 17.165 8.76485 18.8883 6.99633C19.6837 6.18004 20.479 4.27548 17.165 6.58814C12.4592 9.92118 7.8197 13.0501 7.8197 13.0501C7.8197 13.0501 6.75921 13.7303 4.77086 13.1181C2.78241 12.506 0.462642 11.6897 0.462642 11.6897C0.462642 11.6897 -1.12796 10.6694 1.58946 9.58105Z"
+                    fill="white"
+                    fill-opacity="۱"
                   />
                 </svg>
               </Link>

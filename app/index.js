@@ -27,7 +27,6 @@ import ReactIcon from "@/public/assets/ReactIcon.svg";
 import ResponsiveAIcon from "@/public/assets/ResponsiveAIcon.svg";
 import SassIcon from "@/public/assets/SassIcon.svg";
 import TailwindIcon from "@/public/assets/TailwindIcon.svg";
-import footerLaptop from "@/public/assets/footerLaptop.png";
 import AOS from "aos";
 import { useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
@@ -62,7 +61,6 @@ export {
   ResponsiveAIcon,
   SassIcon,
   TailwindIcon,
-  footerLaptop,
   AOS,
   useEffect,
   TypeAnimation,

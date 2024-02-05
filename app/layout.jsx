@@ -5,6 +5,7 @@ import ScroolUpBtn from "@/components/ScroolUpBtn";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Blog from "./Context/Blog";
+import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "عرفان رضایی | Erfandev",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
           <Blog>
             <Navbar />
             {children}
+            <Footer />
             <Analytics />
             <SpeedInsights />
             <ScroolUpBtn />
