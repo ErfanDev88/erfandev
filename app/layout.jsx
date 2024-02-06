@@ -8,9 +8,9 @@ import Blog from "./Context/Blog";
 import Footer from "@/components/layout/Footer";
 
 export const metadata = {
-  title: "عرفان رضایی | Erfandev",
+  title: "عرفان رضایی , برنامه نویس سایت , طراح ui ux سایت | Erfandev",
   description:
-    "محمد عرفان رضایی, عرفان رضایی, عرفان, سایت شخصی عرفان رضایی, erfandev, Erfan, Erfandev, erfandev",
+    "محمد عرفان رضایی, عرفان رضایی, عرفان, سایت شخصی عرفان رضایی, erfandev, Erfan, Erfandev, erfandev, طراح سایت و برنامه نویس سایت ",
 };
 
 export default function RootLayout({ children }) {
@@ -23,6 +23,8 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
+        <meta name="robots" content="index, archive" />
+        <link rel="canonical" href="https://erfandev.vercel.app/" />
       </head>
       <body
         className={`font-[Vazirmatn] bg-[url('../public/assets/background.png')] bg-no-repeat bg-cover overflow-x-hidden flex flex-col justify-center items-center relative`}

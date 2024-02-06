@@ -12,7 +12,9 @@ export default function about() {
         className="w-[90%] md:w-full flex flex-col md:flex-row justify-between items-center md:items-start rounded-[60px] md:py-0 p-10 md:px-24 hero md:mt-28 mt-40 gap-y-12 md:gap-y-0 md:gap-x-32"
       >
         <div className="w-full md:w-[60%] md:h-full md:pt-20 flex flex-col justify-between items-start gap-y-16 order-1 md:-order-1">
-          <h1 className="text-4xl md:text-5xl font-black md:text-start text-center w-full">درباره من</h1>
+          <h1 className="text-4xl md:text-5xl font-black md:text-start text-center w-full">
+            درباره من
+          </h1>
           <p className="font-extralight tex-sm md:text-xl leading-loose tracking-wide text-center md:text-start">
             سلام! من عرفان هستم. بیش از ۳ سال است که در زمینه برنامه‌نویسی
             فعالیت می‌کنم و تجربه‌های گسترده‌ای در این حوزه دارم. همچنین،
@@ -30,7 +32,7 @@ export default function about() {
             حرفه‌ای و منحصربه‌فرد برای شما ایجاد کنم. برای برقراری ارتباط با من
             و دریافت اطلاعات بیشتر، می‌توانید در
             <Link
-              href={"/work-samples"}
+              href={"/contact-us"}
               className="font-bold text-[#ffe196] px-1"
             >
               اینجا
@@ -39,7 +41,7 @@ export default function about() {
           </p>
         </div>
         <div className="w-full md:w-[40%]">
-          <Image src={aboutMeImg} width={400} />
+          <Image alt="عرفان رضایی , Erfandev" src={aboutMeImg} width={400} />
         </div>
       </section>
     </div>

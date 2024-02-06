@@ -17,7 +17,7 @@ function ContinueLine({from, to}) {
         x2="13.25"
         y2="258"
         stroke="url(#paint0_linear_16_52)"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <circle cx="12.5" cy="270.5" r="7.5" fill={to} />
       <circle cx="12.5" cy="270.5" r="12" stroke={to} />
@@ -30,8 +30,8 @@ function ContinueLine({from, to}) {
           y2="254.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color={from} />
-          <stop offset="1" stop-color={to} />
+          <stop stopColor={from} />
+          <stop offset="1" stopColor={to} />
         </linearGradient>
       </defs>
     </svg>

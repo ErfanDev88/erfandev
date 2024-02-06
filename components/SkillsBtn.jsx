@@ -11,6 +11,7 @@ function SkillsBtn({ shadow, title, imageSrc, imageShadow }) {
     >
       {title}
       <Image
+        alt={title}
         src={imageSrc}
         width={58}
         height={58}

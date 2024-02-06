@@ -52,6 +52,7 @@ export default function Home() {
   return (
     <div className="container w-full flex flex-col items-center justify-center">
       <Image
+        alt="navLine"
         src={navLine}
         width={1100}
         height={1100}
@@ -87,10 +88,16 @@ export default function Home() {
           <Btn title={"اطلاعات بیشتر درباره من"} href={"/about"} />
         </div>
         <div className="w-full md:w-[60%] flex justify-end">
-          <Image src={heroImage} width={600} height={600} alt="Erfandev" />
+          <Image
+            src={heroImage}
+            width={600}
+            height={600}
+            alt="Erfandev, عرفان رضایی"
+          />
         </div>
       </section>
       <Image
+        alt="skillLine"
         src={skillLine}
         width={1800}
         height={1300}
@@ -116,7 +123,11 @@ export default function Home() {
             data-aos="fade-left"
             className="w-full md:w-1/4 flex flex-col items-center justify-between gap-y-6"
           >
-            <Image src={mobileDeveloper} className="w-72 md:w-full -mb-16" />
+            <Image
+              alt="برنامه نویس موبایل, Erfandev"
+              src={mobileDeveloper}
+              className="w-72 md:w-full -mb-16"
+            />
             <h1 className="text-3xl font-bold">برنامه نویس موبایل</h1>
             <p className="w-3/4 md:w-full text-xl font-extralight text-center leading-relaxed">
               به تازگی برنامه نویسی موبایل رو یاد گرفتم و میتونم برنامه های
@@ -128,7 +139,11 @@ export default function Home() {
             data-aos="zoom-in"
             className="w-full md:w-1/4 flex flex-col items-center justify-between gap-y-6"
           >
-            <Image src={designer} className="w-72 md:w-full -mb-16" />
+            <Image
+              alt="طراح ui ux سایت, Erfandev"
+              src={designer}
+              className="w-72 md:w-full -mb-16"
+            />
             <h1 className="text-3xl font-bold">طراحی سایت ( UI & UX )</h1>
             <p className="w-3/4 md:w-full text-xl font-extralight text-center leading-relaxed">
               ببیشتر از ۲ سال هست که در زمینه طراحی سایت یا همون رابط کاربری UI
@@ -141,7 +156,11 @@ export default function Home() {
             data-aos="fade-right"
             className="w-full md:w-1/4 flex flex-col items-center justify-between gap-y-6"
           >
-            <Image src={webDeveloper} className="w-72 md:w-full -mb-16" />
+            <Image
+              alt="برنامه نویس سایت و وب , Erfandev"
+              src={webDeveloper}
+              className="w-72 md:w-full -mb-16"
+            />
             <h1 className="text-3xl font-bold">برنامه نویس سایت</h1>
             <p className="w-3/4 md:w-full text-xl font-extralight text-center leading-relaxed">
               بیشتر از ۲ سال هست که توی برنامه نویسی سایت تجربه دارم. معمولا
@@ -153,6 +172,7 @@ export default function Home() {
       </section>
 
       <Image
+        alt="workSamplesLine"
         src={workSamplesLine}
         width={1800}
         height={1300}
@@ -165,15 +185,16 @@ export default function Home() {
         </div>
 
         <h1 className="font-medium text-3xl">آخرین نمونه کار ها</h1>
-        <div className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8">
+        <main className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8">
           {cardData.slice(0, 3).map((data) => {
             return (
-              <div
+              <article
                 data-aos="flip-down"
                 className="h-[550px] md:w-[380px] w-[300px] flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7"
               >
                 <div className="w-full rounded-2xl shadow-xl overflow-hidden">
                   <Image
+                    alt={data.title}
                     src={data.imageSrc}
                     className="w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
                   />
@@ -183,10 +204,10 @@ export default function Home() {
                   {data.description}
                 </p>
                 <Btn title={data.btnTitle} href={data.btnHref} />
-              </div>
+              </article>
             );
           })}
-        </div>
+        </main>
         <Link
           href={"/work-samples"}
           className={`outline-btn rounded-2xl text-white border border-white bg-transparent py-4 px-6 text-xl font-medium hover:text-[#A58A44] relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-white before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0`}
@@ -199,6 +220,7 @@ export default function Home() {
       </section>
 
       <Image
+        alt="workSamplesLine2"
         src={workSamplesLine2}
         width={2000}
         height={1300}
@@ -207,15 +229,16 @@ export default function Home() {
 
       <section className="mt-52 w-full justify-between items-center flex flex-col gap-y-14">
         <h1 className="font-medium text-3xl">مقاله ها</h1>
-        <div className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8 md:w-full md:px-10 md:justify-between">
+        <main className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8 md:w-full md:px-10 md:justify-between">
           {blogData.slice(0, 2).map((data) => {
             return (
-              <div
+              <article
                 data-aos="flip-down"
                 className="md:w-[490px] w-[300px] flex flex-col justify-between items-center rounded-2xl workSampleCard px-4 py-8 gap-y-7"
               >
                 <div className="w-[86%] rounded-2xl shadow-xl overflow-hidden">
                   <Image
+                    alt={data.title}
                     src={data.imageSrc}
                     className="w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
                   />
@@ -225,10 +248,10 @@ export default function Home() {
                   {data.description}
                 </p>
                 <Btn title={data.btnTitle} href={data.btnHref} />
-              </div>
+              </article>
             );
           })}
-        </div>
+        </main>
         <Link
           href={"/blogs"}
           className={`outline-btn rounded-2xl text-[#E0C55C] border border-[#ffe57e4d] bg-transparent py-4 px-6 text-xl font-medium hover:text-[#fff] relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-[#c7ad4c] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0`}
@@ -241,6 +264,7 @@ export default function Home() {
       </section>
 
       <Image
+        alt="TrustLine1"
         src={TrustLine1}
         width={2000}
         height={1300}
@@ -256,6 +280,7 @@ export default function Home() {
         <main className="w-full flex flex-col justify-center items-center gap-y-10">
           <div>
             <Image
+              alt="اعتماد به من , Erfandev"
               src={WhyTrustMeIMAGE}
               width={500}
               height={500}
@@ -291,6 +316,7 @@ export default function Home() {
             </div>
             <div>
               <Image
+                alt="اعتماد به من , Erfandev"
                 src={WhyTrustMeIMAGE}
                 width={500}
                 height={500}
@@ -329,6 +355,7 @@ export default function Home() {
       </section>
 
       <Image
+        alt="TrustLine2"
         src={TrustLine2}
         width={2000}
         height={1300}

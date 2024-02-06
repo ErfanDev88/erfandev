@@ -12,6 +12,7 @@ export default function workSamples() {
   return (
     <div className="container mx-auto w-full flex flex-col items-center justify-center mt-40 md:mt-20 relative">
       <Image
+        alt="navLine"
         src={navLine}
         width={1700}
         height={1100}
@@ -19,7 +20,7 @@ export default function workSamples() {
       />
       <section className="w-full rounded-2xl md:rounded-none md:w-[119.8%] bg-[#A58A44] flex flex-col justify-between items-center gap-y-14 lg:w-[145%] py-10">
         <h1 className="font-medium text-3xl">نمونه کار های من</h1>
-        <div className="md:w-[85%] flex flex-col md:flex-wrap md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8">
+        <main className="md:w-[85%] flex flex-col md:flex-wrap md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8">
           {cardData.map((data) => {
             return (
               <article
@@ -28,6 +29,7 @@ export default function workSamples() {
               >
                 <div className="w-full rounded-2xl shadow-xl overflow-hidden">
                   <Image
+                    alt={data.title}
                     src={data.imageSrc}
                     className="w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
                   />
@@ -40,7 +42,7 @@ export default function workSamples() {
               </article>
             );
           })}
-        </div>
+        </main>
       </section>
     </div>
   );
