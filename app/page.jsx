@@ -196,7 +196,7 @@ export default function Home() {
                   <Image
                     alt={data.title}
                     src={data.imageSrc}
-                    className="w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
+                    className="max-h-[250px] w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
                   />
                 </div>
                 <h1 className="text-3xl font-bold">{data.title}</h1>

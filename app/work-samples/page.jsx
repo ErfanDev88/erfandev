@@ -18,9 +18,9 @@ export default function workSamples() {
         height={1100}
         className="absolute left-[20%] -z-50"
       />
-      <section className="w-full rounded-2xl md:rounded-none md:w-[119.8%] bg-[#A58A44] flex flex-col justify-between items-center gap-y-14 lg:w-[145%] py-10">
+      <section className="w-full rounded-2xl md:rounded-none md:w-[119.8%] bg-[#A58A44] flex flex-col  items-center gap-y-14 lg:w-[145%] py-10">
         <h1 className="font-medium text-3xl">نمونه کار های من</h1>
-        <main className="md:w-[85%] flex flex-col md:flex-wrap md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8">
+        <main className="md:w-[85%] flex flex-col md:flex-wrap md:flex-row md:items-center items-center gap-x-0 gap-y-8 md:gap-x-8">
           {cardData.map((data) => {
             return (
               <article
@@ -31,10 +31,10 @@ export default function workSamples() {
                   <Image
                     alt={data.title}
                     src={data.imageSrc}
-                    className="w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
+                    className="max-h-[250px] w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
                   />
                 </div>
-                <h1 className="text-3xl font-bold">{data.title}</h1>
+                <h1 className="text-3xl font-bold text-center">{data.title}</h1>
                 <p className="text-2xl font-extralight text-center">
                   {data.description}
                 </p>
