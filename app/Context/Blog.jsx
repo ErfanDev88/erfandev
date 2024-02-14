@@ -12,7 +12,7 @@ function Blog({ children }) {
       description:
         "برنامه نویسی هم مثل بقیه مهارت ها نیاز به نقشه راه داره که بهت بگه از کجا شروع کنی تا به بهترین خودت توی اون حرفه تبدیل بشی!",
       btnTitle: "مشاهده مقاله کامل",
-      btnHref: "/",
+      btnHref: "/blogs/how-to-start-programming",
     },
     {
       imageSrc: StartProgramming,
@@ -20,7 +20,7 @@ function Blog({ children }) {
       description:
         "برنامه نویسی هم مثل بقیه مهارت ها نیاز به نقشه راه داره که بهت بگه از کجا شروع کنی تا به بهترین خودت توی اون حرفه تبدیل بشی!",
       btnTitle: "مشاهده مقاله کامل",
-      btnHref: "/",
+      btnHref: "/blogs/what-is-tailwindcss",
     },
     {
       imageSrc: StartProgramming,
@@ -28,7 +28,7 @@ function Blog({ children }) {
       description:
         "برنامه نویسی هم مثل بقیه مهارت ها نیاز به نقشه راه داره که بهت بگه از کجا شروع کنی تا به بهترین خودت توی اون حرفه تبدیل بشی!",
       btnTitle: "مشاهده مقاله کامل",
-      btnHref: "/",
+      btnHref: "/blogs/what-is-nextJs",
     },
   ]);
 

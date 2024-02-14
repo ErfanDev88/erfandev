@@ -191,19 +191,21 @@ export default function Home() {
               <article
                 data-aos="flip-down"
                 className="h-[550px] md:w-[380px] w-[300px] flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7"
+                key={data.id}
               >
                 <div className="w-full rounded-2xl shadow-xl overflow-hidden">
                   <Image
                     alt={data.title}
                     src={data.imageSrc}
+                    key={data.id}
                     className="max-h-[250px] w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
                   />
                 </div>
-                <h1 className="text-3xl font-bold">{data.title}</h1>
-                <p className="text-2xl font-extralight text-center">
+                <h1 className="text-3xl font-bold" key={data.id}>{data.title}</h1>
+                <p className="text-2xl font-extralight text-center" key={data.id}>
                   {data.description}
                 </p>
-                <Btn title={data.btnTitle} href={data.btnHref} />
+                <Btn title={data.btnTitle} href={data.btnHref} key={data.id} />
               </article>
             );
           })}
