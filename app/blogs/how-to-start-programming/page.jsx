@@ -1,8 +1,8 @@
 import BlogDetail from "@/components/BlogDetail";
 import React from "react";
-import StartProgramming from "@/public/assets/blog/firstImageHowStartProgrtamming.jpg";
-import secondImageHowStartProgrtamming from "@/public/assets/blog/secondImageHowStartProgrtamming.jpg";
-import thirdImageHowStartProgrtamming from "@/public/assets/blog/thirdImageHowStartProgrtamming.jpg";
+import StartProgramming from "@/public/assets/Blog/firstImageHowStartProgrtamming.jpg";
+import secondImageHowStartProgrtamming from "@/public/assets/Blog/secondImageHowStartProgrtamming.jpg";
+import thirdImageHowStartProgrtamming from "@/public/assets/Blog/thirdImageHowStartProgrtamming.jpg";
 
 function page() {
   return (

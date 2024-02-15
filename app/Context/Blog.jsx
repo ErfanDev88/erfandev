@@ -1,6 +1,6 @@
 "use client";
 import React, { createContext, useState } from "react";
-import StartProgramming from "@/public/assets/blog/howToStartProgramming.png";
+import StartProgramming from "@/public/assets/Blog/howToStartProgramming.png";
 import whatisTailwindcss from "@/public/assets/whatisTailwindcss.png";
 import whatIsNextJs from "@/public/assets/whatIsNextJs.jpg";
 

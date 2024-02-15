@@ -1,8 +1,8 @@
 import BlogDetail from "@/components/BlogDetail";
 import React from "react";
 import whatIsNextJs from "@/public/assets/whatIsNextJs.jpg";
-import secondImageWhatIsNext from "@/public/assets/blog/secondImageWhatIsNext.png";
-import thirdImageWhatIsNextJS from "@/public/assets/blog/thirdImageWhatIsNextJS.jpg";
+import secondImageWhatIsNext from "@/public/assets/Blog/secondImageWhatIsNext.png";
+import thirdImageWhatIsNextJS from "@/public/assets/Blog/thirdImageWhatIsNextJS.jpg";
 
 function page() {
   return (

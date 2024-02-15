@@ -1,7 +1,7 @@
 import BlogDetail from "@/components/BlogDetail";
 import React from "react";
 import whatisTailwindcss from "@/public/assets/whatisTailwindcss.png";
-import secondImageWhatIsTailwind from "@/public/assets/blog/secondImageWhatIsTailwind.png";
+import secondImageWhatIsTailwind from "@/public/assets/Blog/secondImageWhatIsTailwind.png";
 
 function page() {
   return (
