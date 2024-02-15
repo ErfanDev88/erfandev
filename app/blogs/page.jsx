@@ -48,7 +48,7 @@ export default function blogs() {
         />
       </div>
       {filteredBlogs.length > 0 ? (
-        <main className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8 md:w-full md:px-10 md:justify-between md:flex-wrap">
+        <main className="flex flex-col md:flex-row md:items-start justify-between items-center gap-x-0 gap-y-8 md:gap-x-8 md:w-full md:px-10 md:justify-between md:flex-wrap">
           {filteredBlogs.map((data) => {
             return (
               <article
