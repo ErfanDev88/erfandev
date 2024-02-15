@@ -10,7 +10,7 @@ function CommentCard({ name, description, date ,handleDelete, comments}) {
   return (
     <div
       data-aos="fade"
-      className="w-full max-w-full overflow-x-auto p-4 rounded-md mb-4 bg-slate-700 flex flex-col gap-y-2"
+      className="w-full max-w-full overflow-x-auto p-4 rounded-md mb-4 bg-[#313131] flex flex-col gap-y-2"
     >
       <div className="w-full flex justify-between items-center">
         <h3 className="text-base font-light text-white text-start">{name}</h3>
