@@ -40,7 +40,7 @@ function BlogDetail({
   useEffect(() => {
     sessionStorage.setItem("viewCount", viewCount + 1);
   }, [viewCount]);
-
+  
   const deviceId = "unique-device-id"; // شناسه دستگاه
 
   const [likeCount, setLikeCount] = useState(
