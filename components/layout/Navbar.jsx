@@ -36,7 +36,7 @@ function Navbar() {
           />
         </Link>
         <ul className="md:flex hidden justify-center items-center gap-x-16">
-          <Link href={"/"} className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
+          <Link href={"/"} className="font-extralight text-lg transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
             <svg
               width="20"
               height="20"
@@ -64,7 +64,7 @@ function Navbar() {
           </Link>
           <Link
             href={"/work-samples"}
-            className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2"
+            className="font-extralight text-lg transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2"
           >
             <svg
               width="20"
@@ -107,7 +107,7 @@ function Navbar() {
           </Link>
           <Link
             href={"/blogs"}
-            className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2"
+            className="font-extralight text-lg transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2"
           >
             <svg
               className="opacity-70"
@@ -143,7 +143,7 @@ function Navbar() {
             </svg>
             مقالات
           </Link>
-          <Link href={"/contact-us"} className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
+          <Link href={"/contact-us"} className="font-extralight text-lg transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2">
             <svg
               width="22"
               height="22"
@@ -161,7 +161,7 @@ function Navbar() {
             </svg>
             ارتباط با من
           </Link>
-          <Link href={"about"} className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2 ">
+          <Link href={"about"} className="font-extralight text-lg transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2 ">
             <svg
               width="20"
               height="20"

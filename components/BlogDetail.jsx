@@ -34,35 +34,35 @@ function BlogDetail({
   thirdImage,
 }) {
   const [viewCount, setViewCount] = useState(
-    parseInt(localStorage.getItem("viewCount")) || 0
+    parseInt(sessionStorage.getItem("viewCount")) || 0
   );
 
   useEffect(() => {
-    localStorage.setItem("viewCount", viewCount + 1);
+    sessionStorage.setItem("viewCount", viewCount + 1);
   }, [viewCount]);
 
   const deviceId = "unique-device-id"; // شناسه دستگاه
 
   const [likeCount, setLikeCount] = useState(
-    parseInt(localStorage.getItem(`likeCount_${deviceId}`)) || 0
+    parseInt(sessionStorage.getItem(`likeCount_${deviceId}`)) || 0
   );
   const [liked, setLiked] = useState(
-    Boolean(localStorage.getItem(`liked_${deviceId}`))
+    Boolean(sessionStorage.getItem(`liked_${deviceId}`))
   );
 
   useEffect(() => {
-    localStorage.setItem(`likeCount_${deviceId}`, likeCount);
+    sessionStorage.setItem(`likeCount_${deviceId}`, likeCount);
   }, [deviceId, likeCount]);
 
   const likeHandler = () => {
     if (!liked) {
       setLikeCount(likeCount + 1);
       setLiked(true);
-      localStorage.setItem(`liked_${deviceId}`, true);
+      sessionStorage.setItem(`liked_${deviceId}`, true);
     } else {
       setLikeCount(likeCount - 1);
       setLiked(false);
-      localStorage.removeItem(`liked_${deviceId}`);
+      sessionStorage.removeItem(`liked_${deviceId}`);
     }
   };
 
