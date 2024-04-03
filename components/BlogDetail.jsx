@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import CommentCard from "./CommentCard";
+import localforage from "localforage";
 
 function BlogDetail({
   title,
@@ -33,36 +34,91 @@ function BlogDetail({
   secondImage,
   thirdImage,
 }) {
-  const [viewCount, setViewCount] = useState(
-    parseInt(sessionStorage.getItem("viewCount")) || 0
-  );
 
-  useEffect(() => {
-    sessionStorage.setItem("viewCount", viewCount + 1);
-  }, [viewCount]);
-  
   const deviceId = "unique-device-id"; // شناسه دستگاه
+  const viewCountKey = 'viewCount';
+  const likeCountKey = `likeCount_${deviceId}`;
+  const likedKey = `liked_${deviceId}`;
 
-  const [likeCount, setLikeCount] = useState(
-    parseInt(sessionStorage.getItem(`likeCount_${deviceId}`)) || 0
-  );
-  const [liked, setLiked] = useState(
-    Boolean(sessionStorage.getItem(`liked_${deviceId}`))
-  );
+  const [viewCount, setViewCount] = useState(0);
+  const [likeCount, setLikeCount] = useState(0);
+  const [liked, setLiked] = useState(false);
 
   useEffect(() => {
-    sessionStorage.setItem(`likeCount_${deviceId}`, likeCount);
-  }, [deviceId, likeCount]);
+    const getViewCount = async () => {
+      try {
+        const value = await localforage.getItem(viewCountKey);
+        setViewCount(parseInt(value) || 0);
+      } catch (error) {
+        console.error('Error retrieving view count:', error);
+      }
+    };
+
+    getViewCount();
+  }, []);
+
+  useEffect(() => {
+    const incrementViewCount = async () => {
+      try {
+        await localforage.setItem(viewCountKey, viewCount + 1);
+      } catch (error) {
+        console.error('Error saving view count:', error);
+      }
+    };
+
+    incrementViewCount();
+  }, [viewCount]);
+
+  useEffect(() => {
+    const getLikeCount = async () => {
+      try {
+        const value = await localforage.getItem(likeCountKey);
+        setLikeCount(parseInt(value) || 0);
+      } catch (error) {
+        console.error('Error retrieving like count:', error);
+      }
+    };
+
+    const getLikedStatus = async () => {
+      try {
+        const value = await localforage.getItem(likedKey);
+        setLiked(Boolean(value));
+      } catch (error) {
+        console.error('Error retrieving liked status:', error);
+      }
+    };
+
+    getLikeCount();
+    getLikedStatus();
+  }, [deviceId]);
 
   const likeHandler = () => {
     if (!liked) {
       setLikeCount(likeCount + 1);
       setLiked(true);
-      sessionStorage.setItem(`liked_${deviceId}`, true);
+
+      localforage.setItem(likeCountKey, likeCount + 1)
+        .catch((error) => {
+          console.error('Error saving like count:', error);
+        });
+
+      localforage.setItem(likedKey, true)
+        .catch((error) => {
+          console.error('Error saving liked status:', error);
+        });
     } else {
       setLikeCount(likeCount - 1);
       setLiked(false);
-      sessionStorage.removeItem(`liked_${deviceId}`);
+
+      localforage.setItem(likeCountKey, likeCount - 1)
+        .catch((error) => {
+          console.error('Error saving like count:', error);
+        });
+
+      localforage.removeItem(likedKey)
+        .catch((error) => {
+          console.error('Error removing liked status:', error);
+        });
     }
   };
 
