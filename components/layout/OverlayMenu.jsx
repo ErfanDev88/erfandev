@@ -3,9 +3,12 @@ import Image from "next/image";
 import logo from "../../public/assets/logo.png";
 import Link from "next/link";
 
-function OverlayMenu() {
+function OverlayMenu({ setIsOverlayOpened }) {
+  const linkClick = () => {
+    setIsOverlayOpened(false);
+  };
   return (
-    <nav className="md:hidden w-[60%] h-screen flex flex-col justify-between items-center overlay-menu fixed right-0 top-0 z-40 backdrop-blur-xl py-10 duration-200 transition-all">
+    <nav className="md:hidden w-[70%] h-screen flex flex-col justify-between items-center overlay-menu absolute right-0 top-0 backdrop-blur-xl py-10 duration-200 transition-all z-50">
       <Link href={"/"}>
         <Image
           src={logo}
@@ -16,6 +19,7 @@ function OverlayMenu() {
       </Link>
       <ul className="flex flex-col justify-center items-center gap-y-8">
         <Link
+          onClick={linkClick}
           href={"/"}
           className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2"
         >
@@ -45,6 +49,7 @@ function OverlayMenu() {
           خانه
         </Link>
         <Link
+          onClick={linkClick}
           href={"/work-samples"}
           className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2"
         >
@@ -88,6 +93,7 @@ function OverlayMenu() {
           نمونه کارها
         </Link>
         <Link
+          onClick={linkClick}
           href={"/blogs"}
           className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2"
         >
@@ -126,6 +132,7 @@ function OverlayMenu() {
           مقالات
         </Link>
         <Link
+          onClick={linkClick}
           href={"/contact-us"}
           className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2"
         >
@@ -147,6 +154,7 @@ function OverlayMenu() {
           ارتباط با من
         </Link>
         <Link
+          onClick={linkClick}
           href={"/about"}
           className="font-extralight text-xl transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2 "
         >

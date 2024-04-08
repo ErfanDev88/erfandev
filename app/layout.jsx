@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Blog from "./Context/Blog";
 import Footer from "@/components/layout/Footer";
+import RespoinsiveNavbar from "@/components/layout/RespoinsiveNavbar";
 
 export const metadata = {
   title: "عرفان رضایی , برنامه نویس سایت , طراح ui ux سایت | Erfandev",
@@ -31,7 +32,8 @@ export default function RootLayout({ children }) {
       >
         <WorkSample>
           <Blog>
-            <Navbar />
+            <Navbar/>
+            <RespoinsiveNavbar/>
             {children}
             <Footer />
             <Analytics />
