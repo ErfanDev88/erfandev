@@ -7,14 +7,13 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-  background: #242424
+  background: #242424;
 }
 
 html::-webkit-scrollbar-thumb {
   background-color: #c7a754;
   border-radius: 5px;
 }
-
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -38,6 +37,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: Vazirmatn, sans-serif;
 }
 
 * {

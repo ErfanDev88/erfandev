@@ -18,22 +18,22 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="rtl">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-Variable-font-face.css"
           rel="stylesheet"
+          type="text/css"
         />
+
         <meta name="robots" content="index, archive" />
         <link rel="canonical" href="https://erfandev.vercel.app/" />
       </head>
       <body
-        className={`font-[Vazirmatn] bg-[url('../public/assets/background.png')] bg-no-repeat bg-cover overflow-x-hidden flex flex-col justify-center items-center relative`}
+        className={`bg-[url('../public/assets/background.png')] bg-no-repeat bg-cover overflow-x-hidden flex flex-col justify-center items-center relative`}
       >
         <WorkSample>
           <Blog>
-            <Navbar/>
-            <RespoinsiveNavbar/>
+            <Navbar />
+            <RespoinsiveNavbar />
             {children}
             <Footer />
             <Analytics />
