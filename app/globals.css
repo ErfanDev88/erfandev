@@ -1,3 +1,4 @@
+@import url("https://v1.fontapi.ir/css/Vazir");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,7 +38,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  font-family: Vazirmatn, sans-serif;
+  font-family: Vazir, sans-serif;
+  font-optical-sizing: auto;
 }
 
 * {
