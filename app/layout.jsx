@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
         <link rel="canonical" href="https://erfandev.vercel.app/" />
       </head>
       <body
-        className={`bg-[#191919] overflow-x-hidden flex flex-col justify-center items-center relative`}
+        className={`bg-gradient-to-b from-[#191919] to-[#151515] overflow-x-hidden flex flex-col justify-center items-center relative`}
       >
         <WorkSample>
           <Blog>

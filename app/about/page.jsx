@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import aboutMeImg from "@/public/assets/aboutMeImg.png";
+import aboutMeImg from "@/public/assets/aboutMeImg.jpg";
 import Link from "next/link";
 
 export default function about() {
@@ -9,13 +9,13 @@ export default function about() {
     <div className="container w-full">
       <section
         data-aos="zoom-in"
-        className="w-[90%] md:w-full flex flex-col md:flex-row justify-between items-center md:items-start rounded-[60px] md:py-0 p-10 md:px-24 hero md:mt-28 mt-40 gap-y-12 md:gap-y-0 md:gap-x-32"
+        className="w-[90%] md:w-full flex flex-col md:flex-row justify-between items-center md:items-start rounded-[60px] p-10 md:pr-24 md:pl-0 hero md:mt-28 mt-40 gap-y-12 md:gap-y-0 md:gap-x-32 md:py-0"
       >
         <div className="w-full md:w-[60%] md:h-full md:pt-20 flex flex-col justify-between items-start gap-y-16 order-1 md:-order-1">
           <h1 className="text-4xl md:text-5xl font-black md:text-start text-center w-full">
             درباره من
           </h1>
-          <p className="font-extralight tex-sm md:text-xl leading-loose tracking-wide text-center md:text-start">
+          <p className="font-extralight tex-sm md:text-xl leading-loose tracking-wide text-center md:text-justify">
             سلام! من عرفان هستم. بیش از ۳ سال است که در زمینه برنامه‌نویسی
             فعالیت می‌کنم و تجربه‌های گسترده‌ای در این حوزه دارم. همچنین،
             نمونه‌کارهای زیادی را انجام داده‌ام که می‌توانید در
@@ -40,8 +40,8 @@ export default function about() {
             کلیک کنید.
           </p>
         </div>
-        <div className="w-full md:w-[40%]">
-          <Image alt="عرفان رضایی , Erfandev" src={aboutMeImg} width={400} />
+        <div className="w-full md:w-[40%] flex justify-end h-full">
+          <Image alt="عرفان رضایی , Erfandev" src={aboutMeImg} width={400} className="rounded-e-[60px]" />
         </div>
       </section>
     </div>
