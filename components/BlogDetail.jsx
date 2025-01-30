@@ -131,13 +131,14 @@ function BlogDetail({
 
 
       //Comments
+
+      console.log(process.env.REACT_APP_COMMENT_API)
       const [comments, setComments] = useState([]);
-      const commentApi = "https://retoolapi.dev/SbEQdd/data";
       useEffect(() => {
         const fetchData = async () => {
           try {
             const response = await axios.get(
-              "https://retoolapi.dev/SbEQdd/data"
+              `${process.env.REACT_APP_COMMENT_API}`
             );
             setComments(response.data);
           } catch (error) {
@@ -159,7 +160,7 @@ function BlogDetail({
         const newId = maxId + 1; 
         try {
           const response = await axios.post(
-            "https://retoolapi.dev/SbEQdd/data",
+            `${process.env.REACT_APP_COMMENT_API}`,
             {
               id: newId,
               name,

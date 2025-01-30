@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 function SkillsBtn({ shadow, title, imageSrc, imageShadow }) {
+
   return (
     <button
       className="w-80 md:w-96 flex justify-between items-center py-12 px-10 skillBtn font-normal text-2xl"
