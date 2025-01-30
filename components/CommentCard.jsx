@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import moment from "moment-jalaali";
 import "moment/locale/fa";
 
-function CommentCard({ name, description, date ,handleDelete, comments, isCommentOrUsernameCorrect}) {
-  const [formattedDate, setFormattedDate] = useState(
-    moment(date).locale("fa").format("jYYYY/jM/jD HH:mm:ss")
-  );
+function CommentCard({ name, description, date ,handleDelete, comments, isCommentOrUsernameCorrect, dateTime}) {
+  // const [formattedDate, setFormattedDate] = useState(
+  //   moment(date).locale("fa").format("jYYYY/jM/jD HH:mm")
+  // );
 
   return (
     <div
@@ -15,7 +14,7 @@ function CommentCard({ name, description, date ,handleDelete, comments, isCommen
       <div className="w-full flex justify-between items-center">
         <h3 className="text-base font-light text-white text-start">{name}</h3>
         <p className="text-xs font-light text-white text-end">
-          {formattedDate}
+          {dateTime}
         </p>
       </div>
       <div className="w-full flex justify-end items-center">

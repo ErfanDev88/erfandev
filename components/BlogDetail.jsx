@@ -5,6 +5,8 @@ import React, { useEffect, useRef, useState } from "react";
 import CommentCard from "./CommentCard";
 import localforage from "localforage";
 import axios from "axios";
+import "moment/locale/fa";
+import moment from "moment-jalaali";
 
 function BlogDetail({
   title,
@@ -132,13 +134,14 @@ function BlogDetail({
 
       //Comments
 
-      console.log(process.env.REACT_APP_COMMENT_API)
       const [comments, setComments] = useState([]);
+      const [addedDate, setAddedDate] = useState('')
+      
       useEffect(() => {
         const fetchData = async () => {
           try {
             const response = await axios.get(
-              `${process.env.REACT_APP_COMMENT_API}`
+              `${process.env.NEXT_PUBLIC_COMMENT_API}`
             );
             setComments(response.data);
           } catch (error) {
@@ -149,8 +152,10 @@ function BlogDetail({
       }, []);
     
       const onSubmit = async (values) => {
-        console.log(commentApi)
         event.preventDefault();
+        const now = moment();
+        const persianDateTime = now.format('jYYYY/jMM/jDD HH:mm');
+        setAddedDate(persianDateTime);
         const formData = new FormData(event.target);
         const name = formData.get("name");
         const username = formData.get("username");
@@ -160,12 +165,13 @@ function BlogDetail({
         const newId = maxId + 1; 
         try {
           const response = await axios.post(
-            `${process.env.REACT_APP_COMMENT_API}`,
+            `${process.env.NEXT_PUBLIC_COMMENT_API}`,
             {
               id: newId,
               name,
               username,
               description,
+              addedDate
             }
           );
           console.log("Success", response.data);
@@ -1477,6 +1483,7 @@ function BlogDetail({
                 description={comments.description}
                 comments={comments}
                 handleDelete={handleDelete}
+                dateTime={comments.addedDate}
               />
             ))}
           </div>
