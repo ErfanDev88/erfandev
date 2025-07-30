@@ -1,37 +1,33 @@
 "use client";
-import React, { createContext, useState } from "react";
-import StartProgramming from "@/public/assets/Blog/howToStartProgramming.png";
-import whatisTailwindcss from "@/public/assets/whatisTailwindcss.png";
-import whatIsNextJs from "@/public/assets/whatIsNextJs.jpg";
+import React, { createContext, useEffect, useState } from "react";
 
 export const blogContext = createContext();
 
 function Blog({ children }) {
-  const [blogData, setBlogData] = useState([
-    {
-      imageSrc: StartProgramming,
-      title: "برنامه نویسی رو از کجا شروع کنم؟",
-      description:
-        "برنامه نویسی هم مثل بقیه مهارت ها نیاز به نقشه راه داره که بهت بگه از کجا شروع کنی تا به بهترین خودت توی اون حرفه تبدیل بشی!",
-      btnTitle: "مشاهده مقاله کامل",
-      btnHref: "/blogs/how-to-start-programming",
-    },
-    {
-      imageSrc: whatisTailwindcss,
-      title: "تیلویند چیست (Tailwindcss)",
-      description:"CSS یکی از تکنولوژی‌های مهم دنیای وب است که برای زیبا‌سازی صفحات وب استفاده می‌شود. شما با استفاده از قواعدی که CSS در اختیارتان قرار می‌دهد می‌توانید ظاهر صفحات‌ HTML را به هر شکلی که بخواهید تغییر دهید.",
-      btnTitle: "مشاهده مقاله کامل",
-      btnHref: "/blogs/what-is-tailwindcss",
-    },
-    {
-      imageSrc: whatIsNextJs,
-      title: "NextJs نکست جی اس چیست؟",
-      description:
-        "برنامه نویسی هم مثل بقیه مهارت ها نیاز به نقشه راه داره که بهت بگه از کجا شروع کنی تا به بهترین خودت توی اون حرفه تبدیل بشی!",
-      btnTitle: "مشاهده مقاله کامل",
-      btnHref: "/blogs/what-is-nextJs",
-    },
-  ]);
+  const [blogData, setBlogData] = useState([]);
+
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const res = await fetch("http://localhost:1337/api/blogs?populate=*");
+      const data = await res.json();
+      const formatted = data.data.map((blog) => ({
+        id: blog.id,
+        title: blog.title,
+        description: blog.description,
+        btnTitle: "مشاهده مقاله کامل",
+        btnHref: `/blogs/${blog.slug}`,
+        imageSrc: `http://localhost:1337${blog.image?.url}`,
+        // content: blog.content,
+        // author: blog.author,
+        // date: blog.date,
+      }));
+      console.log(formatted)
+      setBlogData(formatted);
+    };
+
+    fetchBlogs();
+  }, []);
 
   return (
     <blogContext.Provider value={blogData}>{children}</blogContext.Provider>

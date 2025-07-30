@@ -52,11 +52,12 @@ export default function blogs() {
           {filteredBlogs.map((data) => {
             return (
               <article
+                key={data.title}
                 data-aos="flip-down"
                 className="md:w-[490px] w-[300px] flex flex-col justify-between items-center rounded-2xl workSampleCard px-4 py-8 gap-y-7"
               >
                 <div className="w-[86%] rounded-2xl shadow-xl overflow-hidden">
-                  <Image
+                  <img
                     alt={data.title}
                     src={data.imageSrc}
                     className="w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
