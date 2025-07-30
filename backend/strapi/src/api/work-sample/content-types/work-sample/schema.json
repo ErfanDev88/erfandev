@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "work_samples",
+  "info": {
+    "singularName": "work-sample",
+    "pluralName": "work-samples",
+    "displayName": "work-sample"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "imageSrc": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "btnTitle": {
+      "type": "string"
+    },
+    "btnHref": {
+      "type": "string"
+    }
+  }
+}

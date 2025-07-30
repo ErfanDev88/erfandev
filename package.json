@@ -1,0 +1,38 @@
+{
+  "name": "erfandev",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3002",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.23.9",
+    "@vercel/analytics": "^1.1.2",
+    "@vercel/speed-insights": "^1.0.9",
+    "aos": "^2.3.4",
+    "autoprefixer": "10.4.15",
+    "cors": "^2.8.5",
+    "flowbite-react": "^0.8.0",
+    "formik": "^2.4.5",
+    "framer-motion": "^11.0.3",
+    "localforage": "^1.10.0",
+    "moment-jalaali": "^0.10.0",
+    "next": "^15.4.5",
+    "next-routes": "^1.4.2",
+    "next-studio": "^0.1.0",
+    "postcss": "^8.4.33",
+    "react": "^19.1.1",
+    "react-animate-on-scroll": "^2.1.7",
+    "react-dom": "^19.1.1",
+    "react-session": "^0.0.1",
+    "react-type-animation": "^3.1.0",
+    "styled-components": "^6.1.0",
+    "tailwindcss": "3.3.3",
+    "vazirmatn": "^33.0.3",
+    "vercel": "^33.4.1",
+    "yarn": "^1.22.21"
+  }
+}
