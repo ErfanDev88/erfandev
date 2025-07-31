@@ -192,7 +192,7 @@ function OverlayMenu({ setIsOverlayOpened }) {
         </Link>
       </ul>
 
-      <button class="btn-cssbuttons btn">
+      <button className="btn-cssbuttons btn">
         <span>شبکه های اجتماعی</span>
         <span>
           <svg
@@ -201,7 +201,7 @@ function OverlayMenu({ setIsOverlayOpened }) {
             xmlns="http://www.w3.org/2000/svg"
             version="1.1"
             viewBox="0 0 1024 1024"
-            class="icon"
+            className="icon"
           >
             <path
               fill="#ffffff"
@@ -279,7 +279,7 @@ function OverlayMenu({ setIsOverlayOpened }) {
                 xmlns="http://www.w3.org/2000/svg"
                 version="1.1"
                 viewBox="0 0 1024 1024"
-                class="icon"
+                className="icon"
               >
                 <path
                   fill="white"

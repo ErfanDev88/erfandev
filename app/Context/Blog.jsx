@@ -22,7 +22,6 @@ function Blog({ children }) {
         // author: blog.author,
         // date: blog.date,
       }));
-      console.log(formatted)
       setBlogData(formatted);
     };
 

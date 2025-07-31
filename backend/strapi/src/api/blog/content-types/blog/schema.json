@@ -38,6 +38,12 @@
     },
     "content": {
       "type": "blocks"
+    },
+    "likes": {
+      "type": "integer"
+    },
+    "view": {
+      "type": "integer"
     }
   }
 }
