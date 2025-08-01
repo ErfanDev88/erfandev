@@ -4,14 +4,6 @@
         "displayName": "image"
     },
     "options": {},
-    "attributes": {
-        "img": {
-            "type": "media",
-            "multiple": false,
-            "allowedTypes": [
-                "images"
-            ]
-        }
-    },
+    "attributes": {},
     "config": {}
 }

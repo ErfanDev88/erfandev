@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 node_modules
+.env.local
+/.env.local
 backend/strapi/node_modules
 # testing
 /coverage

@@ -5,9 +5,7 @@ export interface ImgImage extends Struct.ComponentSchema {
   info: {
     displayName: 'image';
   };
-  attributes: {
-    img: Schema.Attribute.Media<'images'>;
-  };
+  attributes: {};
 }
 
 export interface TextText extends Struct.ComponentSchema {
@@ -15,9 +13,7 @@ export interface TextText extends Struct.ComponentSchema {
   info: {
     displayName: 'text';
   };
-  attributes: {
-    content: Schema.Attribute.Blocks;
-  };
+  attributes: {};
 }
 
 declare module '@strapi/strapi' {

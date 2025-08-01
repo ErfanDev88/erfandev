@@ -18,9 +18,6 @@ function Blog({ children }) {
         btnTitle: "مشاهده مقاله کامل",
         btnHref: `/blogs/${blog.slug}`,
         imageSrc: `http://localhost:1337${blog.image?.url}`,
-        // content: blog.content,
-        // author: blog.author,
-        // date: blog.date,
       }));
       setBlogData(formatted);
     };

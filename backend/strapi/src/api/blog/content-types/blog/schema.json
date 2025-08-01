@@ -39,11 +39,14 @@
     "content": {
       "type": "blocks"
     },
-    "likes": {
-      "type": "integer"
+    "timeToRead": {
+      "type": "string"
     },
-    "view": {
-      "type": "integer"
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "blogId"
     }
   }
 }

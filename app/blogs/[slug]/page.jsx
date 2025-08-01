@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import RenderContent from "@/components/RenderContent";
 import { useFormik } from "formik";
-import localforage from "localforage";
 import CommentCard from "@/components/CommentCard";
 
 export default function BlogDetailPage() {
@@ -22,139 +21,6 @@ export default function BlogDetailPage() {
   }, [slug]);
 
   if (!blog) return <p>در حال بارگذاری...</p>;
-   const [likeCount, setLikeCount] = useState(blog.likes || 0);
-   const [viewCount, setViewCount] = useState(blog.view || 0);
-   const [liked, setLiked] = useState(false);
-
-  // const likeHandler = async () => {
-  //   const newLikeCount = liked ? likeCount - 1 : likeCount + 1;
-  //   setLiked(!liked);
-  //   setLikeCount(newLikeCount);
-
-  //   try {
-  //     await fetch(`http://localhost:1337/api/blogs/${blog.id}/like`, {
-  //       method: "PUT",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //     });
-  //   } catch (err) {
-  //     console.error("خطا در ثبت لایک:", err);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   const updateView = async () => {
-  //     const newViews = viewCount + 1;
-  //     setViewCount(newViews);
-
-  //     try {
-  //       await fetch(`http://localhost:1337/api/blogs/${blog.id}/view`, {
-  //         method: "PUT",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //       });
-  //     } catch (err) {
-  //       console.error("خطا در ثبت بازدید:", err);
-  //     }
-  //   };
-
-  //   if (blog.id) {
-  //     updateView();
-  //   }
-  // }, [blog.id]);
-
-
-
-
-
-  //  const deviceId = "unique-device-id"; // شناسه دستگاه
-  // const viewCountKey = 'viewCount';
-  // const likeCountKey = `likeCount_${deviceId}`;
-  // const likedKey = `liked_${deviceId}`;
-
-  // const [viewCount, setViewCount] = useState(0);
-  // const [likeCount, setLikeCount] = useState(0);
-  // const [liked, setLiked] = useState(false);
-
-  // useEffect(() => {
-  //   const getViewCount = async () => {
-  //     try {
-  //       const value = await localforage.getItem(viewCountKey);
-  //       setViewCount(parseInt(value) || 0);
-  //     } catch (error) {
-  //       console.error('Error retrieving view count:', error);
-  //     }
-  //   };
-
-  //   getViewCount();
-  // }, []);
-
-  // useEffect(() => {
-  //   const incrementViewCount = async () => {
-  //     try {
-  //       await localforage.setItem(viewCountKey, viewCount + 1);
-  //     } catch (error) {
-  //       console.error('Error saving view count:', error);
-  //     }
-  //   };
-
-  //   incrementViewCount();
-  // }, [viewCount]);
-
-  // useEffect(() => {
-  //   const getLikeCount = async () => {
-  //     try {
-  //       const value = await localforage.getItem(likeCountKey);
-  //       setLikeCount(parseInt(value) || 0);
-  //     } catch (error) {
-  //       console.error('Error retrieving like count:', error);
-  //     }
-  //   };
-
-  //   const getLikedStatus = async () => {
-  //     try {
-  //       const value = await localforage.getItem(likedKey);
-  //       setLiked(Boolean(value));
-  //     } catch (error) {
-  //       console.error('Error retrieving liked status:', error);
-  //     }
-  //   };
-
-  //   getLikeCount();
-  //   getLikedStatus();
-  // }, [deviceId]);
-
-  // const likeHandler = () => {
-  //   if (!liked) {
-  //     setLikeCount(likeCount + 1);
-  //     setLiked(true);
-
-  //     localforage.setItem(likeCountKey, likeCount + 1)
-  //       .catch((error) => {
-  //         console.error('Error saving like count:', error);
-  //       });
-
-  //     localforage.setItem(likedKey, true)
-  //       .catch((error) => {
-  //         console.error('Error saving liked status:', error);
-  //       });
-  //   } else {
-  //     setLikeCount(likeCount - 1);
-  //     setLiked(false);
-
-  //     localforage.setItem(likeCountKey, likeCount - 1)
-  //       .catch((error) => {
-  //         console.error('Error saving like count:', error);
-  //       });
-
-  //     localforage.removeItem(likedKey)
-  //       .catch((error) => {
-  //         console.error('Error removing liked status:', error);
-  //       });
-  //   }
-  // };
 
   //comments
   const initialValues = {
@@ -163,36 +29,65 @@ export default function BlogDetailPage() {
   };
   const [comments, setComments] = useState([]);
 
+  useEffect(() => {
+    if (!blog?.id) return;
+    const fetchComments = async () => {
+      const res = await fetch(
+        `http://localhost:1337/api/comments?filters[blogId][id][$eq]=${blog.id}&populate=*`
+      );
+      const json = await res.json();
+      setComments(json.data);
+    };
+
+    fetchComments();
+  }, [blog?.id]);
+
   const onSubmit = async (values) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const name = formData.get("name");
-    const description = formData.get("description");
-    setComments([...comments, { id: Date.now(), name, description }]);
-    // console.log(values);
-    // setComments([...comments, values]);
+
+    const res = await fetch("http://localhost:1337/api/comments", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization:
+          `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`,
+      },
+      body: JSON.stringify({
+        data: {
+          name: values.name,
+          text: values.description,
+          blogId: blog.id,
+          approved: false,
+        },
+      }),
+    });
+  
+    const data = await res.json();
+    const newComment = data.data;
+
+    setComments((prev) => [...prev, newComment]);
+ if (res.ok) {
+    alert("کامنت شما ثبت شد و پس از تایید مدیر نمایش داده خواهد شد ✅");
+    formik.resetForm();
+  }
   };
 
-  const handleDelete = (id) => {
-    setComments(comments.filter((item) => item.id !== id));
-  };
+const validate = (values) => {
+  let errors = {};
+  if (!values.name) {
+    errors.name = "نام خود را بنویسید";
+  }
+  if (!values.description) {
+    errors.description = "توضیحات خود را بنویسید";
+  }
+  return errors;
+};
 
-  const validate = (values) => {
-    let errors = {};
-    if (!values.name) {
-      errors.name = "نام خود را بنویسید";
-    }
-    if (!values.description) {
-      errors.description = "توضیحات خود را بنویسید";
-    }
-    return errors;
-  };
-  const formik = useFormik({
-    initialValues,
-    onSubmit,
-    validate,
-  });
-  const { values, errors, handleSubmit, handleChange, handleBlur } = formik;
+const formik = useFormik({
+  initialValues,
+  onSubmit,
+  validate,
+});
+const { values, errors, handleSubmit, handleBlur } = formik;
 
   return (
     <section className="container w-full flex flex-col items-center mt-40">
@@ -202,7 +97,7 @@ export default function BlogDetailPage() {
       >
         {blog.title}
       </h1>
-      <div className="w-full md:p-0 p-14 flex justify-between items-center gap-5 md:mt-5 md:gap-0 md:flex-row flex-col">
+      <div className="w-full md:p-0 p-14 flex justify-between items-center gap-5 md:mt-6 md:gap-0 md:flex-row flex-col">
         <div className="flex gap-x-5" data-aos="fade-left">
           <span className="text-normal text-[#cfcfcf]">
             تاریخ انتشار : {blog.date}
@@ -215,36 +110,19 @@ export default function BlogDetailPage() {
           className="flex md:w-auto w-full justify-between items-center gap-x-10"
           data-aos="fade-right"
         >
-          <span className="flex justify-center items-center gap-x-1">
-            <button>
-              <svg
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15.4709 4.0535C14.1978 4.22856 12.9226 4.8312 12 5.80891C11.0774 4.8312 9.8022 4.22856 8.52915 4.0535C6.91335 3.83131 5.1499 4.28425 4.05884 5.73088C2.64706 7.60276 2.64705 10.254 4.05884 12.1258L8.75286 18.3496C10.4125 20.5501 13.5875 20.5501 15.2471 18.3496L19.9412 12.1258C21.3529 10.254 21.3529 7.60276 19.9412 5.73088C18.8501 4.28425 17.0867 3.83131 15.4709 4.0535Z"
-                  fill={liked ? "#E44C2B" : "white"}
-                />
-              </svg>
-            </button>
-            <span className="text-normal font-bold text-white">
-              {likeCount}
-            </span>
+          <span className="text-normal text-[#cfcfcf]">
+            زمان مطالعه : {blog.timeToRead}
           </span>
-          <span className="text-lg">{viewCount} بازدید </span>
         </div>
       </div>
-      <div className="md:mt-8 mt-0 prose prose-lg prose-invert">
+      <div className="md:mt-4 mt-0 prose prose-lg prose-invert">
         <RenderContent content={blog.content} />
       </div>
       <section
         data-aos="fade-up"
-        className="w-full flex flex-col items-center text-center leading-loose mt-32 gap-y-12"
+        className="w-full flex flex-col items-start text-center leading-loose mt-32 gap-y-12"
       >
-        <h1 className="text-4xl text-white font-black">
+        <h1 className="w-full text-center text-4xl text-white font-black">
           نظرت درمورد این مقاله چیه!؟
         </h1>
         <div className="w-full flex flex-col md:flex-row justify-between items-center">
@@ -1231,23 +1109,29 @@ export default function BlogDetailPage() {
           </div>
         </div>
         <h2 className="text-2xl font-bold mb-4 w-full justify-start flex gap-x-4 text-white">
-          کامنت های ثبت شده
-          <span>{comments.length}</span>
-        </h2>
+  کامنت های ثبت شده
+  <span>
+    {comments.length - comments.filter(c => !c.approved).length}
+  </span>
+</h2>
+
 
         {comments.length > 0 && (
-          <div className="w-full max-w-lg mt-10">
-            {comments.map((comments, index) => (
-              <CommentCard
-                key={index}
-                name={comments.name}
-                description={comments.description}
-                comments={comments}
-                handleDelete={handleDelete}
-              />
-            ))}
-          </div>
-        )}
+  <div className="w-full max-w-lg mt-10">
+    {comments.map((c) => {
+      return (
+        <CommentCard
+          key={c.id}
+    name={c.name}
+    description={c.text}
+    date={c.createdAt}
+    isApproved={c.approved}
+        />
+      );
+    })}
+  </div>
+)}
+
       </section>
     </section>
   );

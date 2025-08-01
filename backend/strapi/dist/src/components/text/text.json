@@ -4,10 +4,6 @@
         "displayName": "text"
     },
     "options": {},
-    "attributes": {
-        "content": {
-            "type": "blocks"
-        }
-    },
+    "attributes": {},
     "config": {}
 }
