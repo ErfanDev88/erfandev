@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import aboutMeImg from "@/public/assets/aboutMeImg.jpg";
+import aboutMeImg from "@/public/assets/aboutMePic.jpg";
 import Link from "next/link";
 
 export default function about() {
@@ -15,7 +15,7 @@ export default function about() {
           <h1 className="text-4xl md:text-5xl font-black md:text-start text-center w-full">
             درباره من
           </h1>
-          <p className="font-extralight tex-sm md:text-xl leading-loose tracking-wide text-center md:text-justify">
+          <p className="font-extralight tex-sm md:text-xl leading-10 tracking-wide text-center md:text-justify">
             سلام! من عرفان هستم. بیش از ۳ سال است که در زمینه برنامه‌نویسی
             فعالیت می‌کنم و تجربه‌های گسترده‌ای در این حوزه دارم. همچنین،
             نمونه‌کارهای زیادی را انجام داده‌ام که می‌توانید در

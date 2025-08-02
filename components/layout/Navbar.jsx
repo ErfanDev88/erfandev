@@ -173,7 +173,7 @@ function Navbar() {
             </Dropdown.Item>
             <Dropdown.Item>
               <Link
-                href={"about"}
+                href={"/about"}
                 className="font-extralight text-base transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2 "
               >
                 <svg

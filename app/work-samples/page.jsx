@@ -18,7 +18,7 @@ export default function workSamples() {
         height={1100}
         className="absolute left-[20%] -z-50"
       />
-      <section className="w-full rounded-2xl md:rounded-none md:w-[110.8%] bg-[#A58A44] flex flex-col  items-center gap-y-14 py-10">
+      <section className="w-full rounded-2xl md:rounded-md md:w-[110.8%] bg-gradient-to-br from-[#A58A44] to-[#837233d7]  flex flex-col  items-center gap-y-14 py-10">
         <h1 className="font-medium text-3xl">نمونه کار های من</h1>
         <main className="md:w-[85%] flex flex-col md:flex-wrap md:flex-row md:items-center items-center gap-x-0 gap-y-8 md:gap-x-8">
           {cardData.map((data) => {
