@@ -4,20 +4,16 @@
 /node_modules
 /.pnp
 .pnp.js
-/.frontend/node_modules
-.frontend/node_modules
-.frontend/.env.local
-/.frontend//.env.local
-/backend/strapi/node_modules
-backend/strapi/node_modules
+.env.local
+/.env.local
+../backend/strapi/node_modules
 # testing
 /coverage
-/node_modules
+node_modules
 # next.js
-/.frontend/.next/
-.frontend/.next/
-.frontend/out/
 .next/
+/.next/
+/out/
 out/
 # production
 /build
