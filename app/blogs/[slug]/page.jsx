@@ -12,7 +12,7 @@ export default function BlogDetailPage() {
   useEffect(() => {
     const fetchBlog = async () => {
       const res = await fetch(
-        `http://localhost:1337/api/blogs?filters[slug][$eq]=${slug}&populate[populate]=*`
+        `https://erfandev-strapi.liara.run/api/blogs?filters[slug][$eq]=${slug}&populate[populate]=*`
       );
       const data = await res.json();
       setBlog(data.data[0]);
@@ -33,7 +33,7 @@ export default function BlogDetailPage() {
     if (!blog?.id) return;
     const fetchComments = async () => {
       const res = await fetch(
-        `http://localhost:1337/api/comments?filters[blogId][id][$eq]=${blog.id}&populate=*`
+        `https://erfandev-strapi.liara.run/api/comments?filters[blogId][id][$eq]=${blog.id}&populate=*`
       );
       const json = await res.json();
       setComments(json.data);
@@ -44,7 +44,7 @@ export default function BlogDetailPage() {
 
   const onSubmit = async (values) => {
 
-    const res = await fetch("http://localhost:1337/api/comments", {
+    const res = await fetch("https://erfandev-strapi.liara.run/api/comments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

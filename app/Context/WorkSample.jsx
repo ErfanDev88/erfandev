@@ -9,7 +9,7 @@ function WorkSample({ children }) {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          "http://localhost:1337/api/work-samples?populate=*"
+          "https://erfandev-strapi.liara.run/api/work-samples?populate=*"
         );
         const data = await res.json();
         const formatted = data.data.map((item) => ({
@@ -18,7 +18,7 @@ function WorkSample({ children }) {
           btnTitle: item.btnTitle,
           btnHref: item.btnHref,
           imageSrc: item.imageSrc?.url
-            ? `http://localhost:1337${item.imageSrc.url}`
+            ? `https://erfandev-strapi.liara.run${item.imageSrc.url}`
             : null,
         }));
         setWorkSamplesData(formatted);

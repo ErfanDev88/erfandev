@@ -9,7 +9,7 @@ function Blog({ children }) {
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      const res = await fetch("http://localhost:1337/api/blogs?populate=*");
+      const res = await fetch("https://erfandev-strapi.liara.run/api/blogs?populate=*");
       const data = await res.json();
       const formatted = data.data.map((blog) => ({
         id: blog.id,
@@ -17,7 +17,7 @@ function Blog({ children }) {
         description: blog.description,
         btnTitle: "مشاهده مقاله کامل",
         btnHref: `/blogs/${blog.slug}`,
-        imageSrc: `http://localhost:1337${blog.image?.url}`,
+        imageSrc: `https://erfandev-strapi.liara.run${blog.image?.url}`,
       }));
       setBlogData(formatted);
     };

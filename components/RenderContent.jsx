@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 function RenderContent({ content }) {
   if (!content) return null;
