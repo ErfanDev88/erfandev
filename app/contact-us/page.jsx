@@ -10,9 +10,9 @@ export default function contactUs() {
     <section className="container w-full justify-between items-center flex flex-col md:flex-row gap-y-14 mt-40 md:mt-32 md:gap-y-0 md:items-start">
       <div
         data-aos="flip-down"
-        className="h-[300px] md:w-[400px] w-[300px] flex flex-col items-center rounded-2xl workSampleCard px-5 py-2 gap-y-12"
+        className="h-[340px] md:w-[400px] w-[300px] flex flex-col items-center rounded-2xl workSampleCard px-5 py-2 gap-y-12"
       >
-        <h1 className="text-3xl font-bold flex justify-center items-center flex-col gap-y-2">
+        <h1 className="text-3xl text-white font-bold flex justify-center items-center flex-col gap-y-2">
           <Image alt="شماره تماس , Erfandev" src={Phone3d} width={100} />
           شماره تماس
         </h1>
@@ -37,12 +37,33 @@ export default function contactUs() {
             />
           </svg>
         </Link>
+        <Link
+          href={"tel:09933360155"}
+          className="font-extralight tracking-wider text-xl hover:text-[#ecda90] transition-all duration-200 flex justify-between items-center gap-x-2"
+        >
+          09933360155
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="opacity-70"
+          >
+            <path
+              d="M18.3084 15.2751C18.3084 15.5751 18.2417 15.8834 18.1001 16.1834C17.9584 16.4834 17.7751 16.7667 17.5334 17.0334C17.1251 17.4834 16.6751 17.8084 16.1667 18.0167C15.6667 18.2251 15.1251 18.3334 14.5417 18.3334C13.6917 18.3334 12.7834 18.1334 11.8251 17.7251C10.8667 17.3167 9.90842 16.7667 8.95842 16.0751C8.00008 15.3751 7.09175 14.6001 6.22508 13.7417C5.36675 12.8751 4.59175 11.9667 3.90008 11.0167C3.21675 10.0667 2.66675 9.11675 2.26675 8.17508C1.86675 7.22508 1.66675 6.31675 1.66675 5.45008C1.66675 4.88341 1.76675 4.34175 1.96675 3.84175C2.16675 3.33341 2.48341 2.86675 2.92508 2.45008C3.45841 1.92508 4.04175 1.66675 4.65841 1.66675C4.89175 1.66675 5.12508 1.71675 5.33341 1.81675C5.55008 1.91675 5.74175 2.06675 5.89175 2.28341L7.82508 5.00842C7.97508 5.21675 8.08341 5.40841 8.15841 5.59175C8.23341 5.76675 8.27508 5.94175 8.27508 6.10008C8.27508 6.30008 8.21675 6.50008 8.10008 6.69175C7.99175 6.88341 7.83341 7.08341 7.63341 7.28341L7.00008 7.94175C6.90841 8.03341 6.86675 8.14175 6.86675 8.27508C6.86675 8.34175 6.87508 8.40008 6.89175 8.46675C6.91675 8.53341 6.94175 8.58341 6.95842 8.63341C7.10842 8.90841 7.36675 9.26675 7.73341 9.70008C8.10841 10.1334 8.50841 10.5751 8.94175 11.0167C9.39175 11.4584 9.82508 11.8667 10.2667 12.2417C10.7001 12.6084 11.0584 12.8584 11.3417 13.0084C11.3834 13.0251 11.4334 13.0501 11.4917 13.0751C11.5584 13.1001 11.6251 13.1084 11.7001 13.1084C11.8417 13.1084 11.9501 13.0584 12.0417 12.9667L12.6751 12.3417C12.8834 12.1334 13.0834 11.9751 13.2751 11.8751C13.4667 11.7584 13.6584 11.7001 13.8667 11.7001C14.0251 11.7001 14.1917 11.7334 14.3751 11.8084C14.5584 11.8834 14.7501 11.9917 14.9584 12.1334L17.7167 14.0917C17.9334 14.2417 18.0834 14.4167 18.1751 14.6251C18.2584 14.8334 18.3084 15.0417 18.3084 15.2751Z"
+              stroke="white"
+              strokeWidth="1.5"
+              strokeMiterlimit="10"
+            />
+          </svg>
+        </Link>
       </div>
       <div
         data-aos="flip-down"
-        className="h-[300px] md:w-[400px] w-[300px] flex flex-col items-center rounded-2xl workSampleCard px-5 py-2 gap-y-12"
+        className="h-[340px] md:w-[420px] w-[300px] flex flex-col items-center rounded-2xl workSampleCard px-5 py-2 gap-y-12"
       >
-        <h1 className="text-3xl font-bold flex justify-center items-center flex-col gap-y-2">
+        <h1 className="text-3xl text-white font-bold flex justify-center items-center flex-col gap-y-2">
           <Image alt="آدرس ایمیل , Erfandev" src={email3d} width={100} />
           ایمیل
         </h1>
@@ -93,12 +114,59 @@ export default function contactUs() {
             />
           </svg>
         </Link>
+        <Link
+          href={"mailto:erfandev.ir@gmail.com"}
+          className="font-extralight tracking-wider text-xl hover:text-[#ecda90] transition-all duration-200 flex justify-between items-center gap-x-2"
+        >
+          erfandev.ir@gmail.com
+          <svg
+            width="22"
+            height="22"
+            className="opacity-70"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2 8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5H7"
+              stroke="white"
+              strokeWidth="1.5"
+              strokeMiterlimit="10"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9"
+              stroke="white"
+              strokeWidth="1.5"
+              strokeMiterlimit="10"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M2 16.5H8"
+              stroke="white"
+              strokeWidth="1.5"
+              strokeMiterlimit="10"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M2 12.5H5"
+              stroke="white"
+              strokeWidth="1.5"
+              strokeMiterlimit="10"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </Link>
       </div>
       <div
         data-aos="flip-down"
         className="md:w-[400px] w-[300px] flex flex-col items-center rounded-2xl workSampleCard px-5 pt-2 pb-5 gap-y-12"
       >
-        <h1 className="text-3xl font-bold flex justify-center items-center flex-col gap-y-2">
+        <h1 className="text-3xl text-white font-bold flex justify-center items-center flex-col gap-y-2">
           <Image
             alt="شبکه هیا اجتماعی , Erfandev"
             src={socialmedia3d}
@@ -111,7 +179,7 @@ export default function contactUs() {
             href={"https://dribbble.com/erfandev88"}
             className="font-extralight tracking-wider text-lg hover:text-[#ecda90] transition-all duration-200 flex justify-between items-center gap-x-2"
           >
-            Dribbble.com - Erfandev88
+            Dribbble - Erfandev88
             <svg
               width="22"
               height="22"
@@ -145,7 +213,7 @@ export default function contactUs() {
             href={"https://github.com/erfandev88"}
             className="font-extralight tracking-wider text-lg hover:text-[#ecda90] transition-all duration-200 flex justify-between items-center gap-x-2"
           >
-            Github.com - Erfandev88
+            Github - Erfandev88
             <svg
               width="23"
               height="22"
@@ -154,8 +222,8 @@ export default function contactUs() {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M11.3233 0C5.06716 0 0 5.04701 0 11.2782C0 16.2688 3.24129 20.4841 7.74228 21.9785C8.30845 22.0771 8.52076 21.7388 8.52076 21.4427C8.52076 21.1749 8.50661 20.2867 8.50661 19.3422C5.66163 19.8638 4.92562 18.6514 4.69916 18.017C4.57177 17.6927 4.01976 16.6918 3.53852 16.4239C3.14221 16.2125 2.57604 15.6908 3.52437 15.6767C4.41607 15.6626 5.05301 16.4944 5.26532 16.8328C6.28441 18.5386 7.91213 18.0593 8.56322 17.7632C8.6623 17.0301 8.95954 16.5367 9.28508 16.2548C6.76565 15.9728 4.13299 15 4.13299 10.6861C4.13299 9.45962 4.57177 8.44458 5.29363 7.6551C5.1804 7.37314 4.78408 6.21713 5.40686 4.66637C5.40686 4.66637 6.35518 4.37031 8.52076 5.82239C9.42662 5.56863 10.3891 5.44175 11.3516 5.44175C12.3141 5.44175 13.2765 5.56863 14.1824 5.82239C16.348 4.35622 17.2963 4.66637 17.2963 4.66637C17.9191 6.21713 17.5228 7.37314 17.4095 7.6551C18.1314 8.44458 18.5702 9.44552 18.5702 10.6861C18.5702 15.0141 15.9233 15.9728 13.4039 16.2548C13.8144 16.6072 14.1682 17.2839 14.1682 18.3412C14.1682 19.8497 14.1541 21.0621 14.1541 21.4427C14.1541 21.7388 14.3664 22.0912 14.9326 21.9785C19.4053 20.4841 22.6465 16.2548 22.6465 11.2782C22.6465 5.04701 17.5794 0 11.3233 0Z"
                 fill="white"
                 fillOpacity="0.7"
@@ -166,7 +234,7 @@ export default function contactUs() {
             href={"https://instagram.com/erfandev88"}
             className="font-extralight tracking-wider text-lg hover:text-[#ecda90] transition-all duration-200 flex justify-between items-center gap-x-2"
           >
-            Instagram.com - Erfandev88
+            Instagram - Erfandev88
             <svg
               width="22"
               height="22"
@@ -190,7 +258,7 @@ export default function contactUs() {
             href={"https://t.me/+989393321803"}
             className="font-extralight tracking-wider text-lg hover:text-[#ecda90] transition-all duration-200 flex justify-between items-center gap-x-2"
           >
-            Telegram.com - Erfandev88
+            Telegram - Erfandev88
             <svg
               width="26"
               height="22"
@@ -209,7 +277,7 @@ export default function contactUs() {
             href={"https://www.linkedin.com/in/erfan-rezaie-4825a92aa/"}
             className="font-extralight tracking-wider text-lg hover:text-[#ecda90] transition-all duration-200 flex justify-between items-center gap-x-2"
           >
-            Linkedin.com - Erfandev88
+            Linkedin - Erfandev88
             <svg
               width="23"
               height="22"

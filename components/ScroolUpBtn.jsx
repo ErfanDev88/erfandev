@@ -31,7 +31,7 @@ function ScroolUpBtn() {
   };
   return (
     <motion.div
-      className="p-3 rounded-full bg-[#c7a754] fixed bottom-7 md:right-8 right-12 flex cursor-pointer"
+      className="p-3 rounded-full bg-[#c7a754] fixed bottom-4 md:bottom-7 md:right-8 right-0 flex cursor-pointer"
       style={{ opacity: 0, y: 20 }}
       animate={controls}
       transition={{ duration: 0.3 }}

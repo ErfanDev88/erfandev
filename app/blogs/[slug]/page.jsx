@@ -42,14 +42,13 @@ export default function BlogDetailPage() {
     fetchComments();
   }, [blog?.id]);
 
+  const [isCommentSent, setIsCommentSent] = useState(false)
   const onSubmit = async (values) => {
-
     const res = await fetch("https://erfandev-strapi.liara.run/api/comments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization:
-          `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`,
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`,
       },
       body: JSON.stringify({
         data: {
@@ -60,34 +59,38 @@ export default function BlogDetailPage() {
         },
       }),
     });
-  
+
     const data = await res.json();
     const newComment = data.data;
 
     setComments((prev) => [...prev, newComment]);
- if (res.ok) {
-    alert("کامنت شما ثبت شد و پس از تایید مدیر نمایش داده خواهد شد ✅");
-    formik.resetForm();
-  }
+    if (res.ok) {
+      setIsCommentSent(true)
+      formik.resetForm();
+
+      setTimeout(() => {
+        setIsCommentSent(false);
+      }, 3000);
+    }
   };
 
-const validate = (values) => {
-  let errors = {};
-  if (!values.name) {
-    errors.name = "نام خود را بنویسید";
-  }
-  if (!values.description) {
-    errors.description = "توضیحات خود را بنویسید";
-  }
-  return errors;
-};
+  const validate = (values) => {
+    let errors = {};
+    if (!values.name) {
+      errors.name = "نام خود را بنویسید";
+    }
+    if (!values.description) {
+      errors.description = "توضیحات خود را بنویسید";
+    }
+    return errors;
+  };
 
-const formik = useFormik({
-  initialValues,
-  onSubmit,
-  validate,
-});
-const { values, errors, handleSubmit, handleBlur } = formik;
+  const formik = useFormik({
+    initialValues,
+    onSubmit,
+    validate,
+  });
+  const { values, errors, handleSubmit, handleBlur } = formik;
 
   return (
     <section className="container w-full flex flex-col items-center mt-40">
@@ -191,11 +194,22 @@ const { values, errors, handleSubmit, handleBlur } = formik;
             </div>
             <button
               type="submit"
-              className="btn rounded-2xl py-2 px-5 text-lg font-medium hover:scale-110 hover:rotate-2 transition-all duration-300 text-center"
+              className="btn rounded-2xl py-2 px-5 text-lg font-medium hover:scale-110 hover:rotate-2 transition-all duration-300 text-center text-white"
             >
               ارسال نظر
             </button>
+            {
+              isCommentSent ? (
+                <section className="p-3 rounded-2xl shadow-sm bg-[#c7ac4cd1] border-[0.5px] border-white/5 relative overflow-hidden">
+                  <span className="text-sm font-extralight text-white">کامنت شما ثبت و پس از تایید نمایش داده میشود ✅</span>
+                  <div className="absolute bottom-0 left-0 h-1 bg-[#ffedadd1] animate-progress"></div>
+                </section>
+              ):
+               null
+            }
+            
           </form>
+
           <div className="w-1/2 md:flex hidden">
             <svg
               width="500"
@@ -1109,29 +1123,27 @@ const { values, errors, handleSubmit, handleBlur } = formik;
           </div>
         </div>
         <h2 className="text-2xl font-bold mb-4 w-full justify-start flex gap-x-4 text-white">
-  کامنت های ثبت شده
-  <span>
-    {comments.length - comments.filter(c => !c.approved).length}
-  </span>
-</h2>
-
+          کامنت های ثبت شده
+          <span>
+            {comments.length - comments.filter((c) => !c.approved).length}
+          </span>
+        </h2>
 
         {comments.length > 0 && (
-  <div className="w-full max-w-lg mt-10">
-    {comments.map((c) => {
-      return (
-        <CommentCard
-          key={c.id}
-    name={c.name}
-    description={c.text}
-    date={c.createdAt}
-    isApproved={c.approved}
-        />
-      );
-    })}
-  </div>
-)}
-
+          <div className="w-full max-w-lg mt-10">
+            {comments.map((c) => {
+              return (
+                <CommentCard
+                  key={c.id}
+                  name={c.name}
+                  description={c.text}
+                  date={c.createdAt}
+                  isApproved={c.approved}
+                />
+              );
+            })}
+          </div>
+        )}
       </section>
     </section>
   );

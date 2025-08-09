@@ -36,9 +36,22 @@ body {
   font-optical-sizing: auto;
 }
 
+a{
+  color: white;
+}
 * {
   box-sizing: border-box;
 }
+
+@keyframes progressShrink {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+.animate-progress {
+  animation: progressShrink 3s linear reverse;
+}
+
 
 .hero {
   background: linear-gradient(

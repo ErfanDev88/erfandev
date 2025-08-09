@@ -14,7 +14,7 @@ export default function blogs() {
 
   return (
     <section className="container w-full justify-between items-center flex flex-col gap-y-14 mt-40 md:mt-20 mb-10">
-      <h1 className="font-medium text-3xl">مقاله ها</h1>
+      <h1 className="font-medium text-3xl text-white">مقاله ها</h1>
       <div className="flex border border-white/60 rounded-xl p-3 gap-x-2">
         <svg
           width="22"
@@ -42,7 +42,7 @@ export default function blogs() {
         <input
           type="text"
           placeholder="دنبال چه مقاله ای هستی؟"
-          className="w-[90%] bg-transparent focus:outline-none"
+          className="w-[90%] bg-transparent focus:outline-none text-white"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
@@ -63,8 +63,8 @@ export default function blogs() {
                     className="w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
                   />
                 </div>
-                <h1 className="text-3xl font-bold">{data.title}</h1>
-                <p className="w-[80%] text-xl font-extralight text-center leading-relaxed">
+                <h1 className="text-3xl font-bold text-white text-center md:text-start">{data.title}</h1>
+                <p className="w-[80%] text-xl font-extralight text-white text-start md:text-center leading-relaxed">
                   {data.description}
                 </p>
                 <Btn title={data.btnTitle} href={data.btnHref} />
@@ -73,7 +73,7 @@ export default function blogs() {
           })}
         </main>
       ) : (
-        <span className="text-xl">
+        <span className="text-xl text-white">
           هیچ مقاله ای با نام "{searchQuery}" پیدا نشد!
         </span>
       )}

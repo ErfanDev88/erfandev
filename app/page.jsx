@@ -62,7 +62,7 @@ export default function Home() {
         data-aos="zoom-in"
         className="w-[90%] flex flex-col md:flex-row justify-between items-center rounded-[60px] md:p-16 p-10 hero md:mt-16 mt-28 gap-y-12 md:gap-y-0"
       >
-        <div className="w-full md:w-[40%] flex flex-col justify-between md:items-start items-center md:gap-y-10 gap-y-8 order-1 md:order-none ">
+        <div className="w-full md:w-[40%] flex flex-col justify-between md:items-start items-center md:gap-y-10 gap-y-8 order-1 md:order-none text-white">
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially
@@ -110,8 +110,8 @@ export default function Home() {
           data-aos="fade-up"
           className="flex flex-col items-center justify-center gap-y-10"
         >
-          <h1 className="text-3xl font-medium">چیکار میتونم بکنم؟</h1>
-          <p className="text-2xl font-extralight text-center leading-relaxed">
+          <h1 className="text-3xl font-medium text-white">چیکار میتونم بکنم؟</h1>
+          <p className="text-2xl font-extralight text-center leading-relaxed text-white">
             همونطور که بالاتر گفتم، تخصص من برنامه نویسی هست. حالا بخوایم
             تقسیم‌بندی کنیم بخش‌ها رو، می‌تونم بگم توی سه بخش برنامه نویسی سایت،
             برنامه نویسی موبایل, طراحی سایت ( UI & UX ) و آموزش دادن برنامه
@@ -128,8 +128,8 @@ export default function Home() {
               src={mobileDeveloper}
               className="w-72 md:w-full -mb-16"
             />
-            <h1 className="text-3xl font-bold">برنامه نویس موبایل</h1>
-            <p className="w-3/4 md:w-full text-xl font-extralight text-center leading-relaxed">
+            <h1 className="text-3xl font-bold text-white" >برنامه نویس موبایل</h1>
+            <p className="w-3/4 md:w-full text-xl font-extralight text-center leading-relaxed text-white">
               به تازگی برنامه نویسی موبایل رو یاد گرفتم و میتونم برنامه های
               اندرویدی و IOS بسازم با بهترین UI ممکن. فعلا پروژه های کوچیک میزنم
               تا کم کم برسم به پروژه های بزرگ و فروشگاهی
@@ -144,8 +144,8 @@ export default function Home() {
               src={designer}
               className="w-72 md:w-full -mb-16"
             />
-            <h1 className="text-3xl font-bold">طراحی سایت ( UI & UX )</h1>
-            <p className="w-3/4 md:w-full text-xl font-extralight text-center leading-relaxed">
+            <h1 className="text-3xl font-bold text-white">طراحی سایت ( UI & UX )</h1>
+            <p className="w-3/4 md:w-full text-xl font-extralight text-center leading-relaxed text-white">
               ببیشتر از ۲ سال هست که در زمینه طراحی سایت یا همون رابط کاربری UI
               & UX تجربه دارم و نمونه کار های زیادی هم دارم. معمولا زیاد روی
               پروژه هام وقت میزارم و از تمام خلاقیتم براشون استفاده میکنم تا
@@ -161,8 +161,8 @@ export default function Home() {
               src={webDeveloper}
               className="w-72 md:w-full -mb-16"
             />
-            <h1 className="text-3xl font-bold">برنامه نویس سایت</h1>
-            <p className="w-3/4 md:w-full text-xl font-extralight text-center leading-relaxed">
+            <h1 className="text-3xl font-bold text-white">برنامه نویس سایت</h1>
+            <p className="w-3/4 md:w-full text-xl font-extralight text-center leading-relaxed text-white">
               بیشتر از ۲ سال هست که توی برنامه نویسی سایت تجربه دارم. معمولا
               سرعتم توی انجام پروژه ها زیاده و معمولا بدون باگ هست. توی کمترین
               زمان و به بهترین شکل ممکن پروژه هارو انجام میدم
@@ -184,7 +184,7 @@ export default function Home() {
           <ContinueLine from={"#FFE57E"} to={"#fff"} />
         </div>
 
-        <h1 className="font-medium text-3xl">آخرین نمونه کار ها</h1>
+        <h1 className="font-medium text-3xl text-white">آخرین نمونه کار ها</h1>
         <main className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8">
           {cardData.slice(0, 3).map((data) => {
             return (
@@ -201,8 +201,8 @@ export default function Home() {
                     className="max-h-[250px] w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
                   />
                 </div>
-                <h1 className="text-3xl font-bold" key={data.id}>{data.title}</h1>
-                <p className="text-2xl font-extralight text-center" key={data.id}>
+                <h1 className="text-white text-3xl font-bold" key={data.id}>{data.title}</h1>
+                <p className="text-white text-2xl font-extralight text-center" key={data.id}>
                   {data.description}
                 </p>
                 <Btn title={data.btnTitle} href={data.btnHref} key={data.id} />
@@ -230,7 +230,7 @@ export default function Home() {
       />
 
       <section className="mt-52 w-full justify-between items-center flex flex-col gap-y-14">
-        <h1 className="font-medium text-3xl">مقاله ها</h1>
+        <h1 className="font-medium text-3xl text-white">مقاله ها</h1>
         <main className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8 md:w-full md:px-10 md:justify-between">
           {blogData.slice(0, 2).map((data) => {
             return (
@@ -246,8 +246,8 @@ export default function Home() {
                     className="w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
                   />
                 </div>
-                <h1 className="text-3xl font-bold">{data.title}</h1>
-                <p className="w-[80%] text-xl font-extralight text-center leading-relaxed">
+                <h1 className="text-white text-3xl font-bold">{data.title}</h1>
+                <p className="w-[80%] text-white text-xl font-extralight text-center leading-relaxed">
                   {data.description}
                 </p>
                 <Btn title={data.btnTitle} href={data.btnHref} />
@@ -275,7 +275,7 @@ export default function Home() {
       />
 
       <section className="w-full flex flex-col justify-between items-center mt-64 gap-y-24">
-        <h1 className="text-3xl font-medium" data-aos="flip-down">
+        <h1 className="text-3xl text-white font-medium" data-aos="flip-down">
           دلیل <span className="font-bold text-[#E0C55C]">اعتماد</span> به من
           چیه؟
         </h1>
@@ -295,8 +295,8 @@ export default function Home() {
             className="md:w-96 w-full flex flex-col justify-center items-center gap-y-6"
             data-aos="fade-down"
           >
-            <h1 className="font-semibold text-4xl">کیفیت بالا</h1>
-            <p className="font-extralight text-lg text-center leading-loose">
+            <h1 className="font-semibold text-4xl text-white">کیفیت بالا</h1>
+            <p className="font-extralight text-lg text-center leading-loose text-white">
               سعی می‌کنم پروژه‌ای که انجام می‌دم به بهترین شکل و کیفیت باشه.
               پروژه حتی اگر خیلی هم کوچیک باشه، اصلاً سعی نمی‌کنم که فقط سرهمش
               کنم و تحویل مشتری بدم. یه طوری می‌نویسمش که مشتری اگر خواست تغییری
@@ -308,8 +308,8 @@ export default function Home() {
               className="md:w-96 w-full flex flex-col justify-center items-center gap-y-6"
               data-aos="fade-left"
             >
-              <h1 className="font-semibold text-4xl">پشتیبانی و پاسخ گویی</h1>
-              <p className="font-extralight text-lg text-center leading-loose">
+              <h1 className="font-semibold text-4xl text-white">پشتیبانی و پاسخ گویی</h1>
+              <p className="font-extralight text-lg text-center leading-loose text-white">
                 معمولاً پروژه‌هایی که می‌نویسم باگی نداره که اصلاً نیاز به
                 پشتیبانی و ... باشه. ولی خب اگر مشتری خودش بخواد، می‌تونم
                 مسئولیت پشتیبانیش رو هم برعهده بگیرم. معمولاً اکثر اوقات در
@@ -331,8 +331,8 @@ export default function Home() {
               className="md:w-96 w-full flex flex-col justify-center items-center gap-y-6"
               data-aos="fade-right"
             >
-              <h1 className="font-semibold text-4xl">اصلاحات نامحدود</h1>
-              <p className="font-extralight text-lg text-center leading-loose">
+              <h1 className="font-semibold text-4xl text-white">اصلاحات نامحدود</h1>
+              <p className="font-extralight text-lg text-center leading-loose text-white">
                 مشتری اگر خوب باشه، منم باهاش مشکلی ندارم و هر تغییر و یا
                 امکاناتی که می‌خواد رو می‌تونم براش انجام بدم. همیشه توی تحلیل
                 اولیه سعی می‌کنم پروژه رو بلند مدت در نظر بگیرم که اگر مشتری
@@ -344,8 +344,8 @@ export default function Home() {
             className="md:w-96 w-full flex flex-col justify-center items-center gap-y-6"
             data-aos="fade-up"
           >
-            <h1 className="font-semibold text-4xl">تحویل به موقع</h1>
-            <p className="font-extralight text-lg text-center leading-loose">
+            <h1 className="font-semibold text-4xl text-white">تحویل به موقع</h1>
+            <p className="font-extralight text-lg text-center leading-loose text-white">
               سعی می‌کنم که همیشه سر وقت پروژه رو تحویل بدم. بدون باگ و اشکال.
               اگر تأخیری هم توی کارم پیش اومد، مسئولیتشو برعهده می‌گیرم.
             </p>
@@ -366,7 +366,7 @@ export default function Home() {
       />
 
       <section className="w-full flex flex-col justify-between items-center mt-64 gap-y-20">
-        <h1 className="text-4xl font-medium flex flex-col justify-between items-center gap-y-8 text-center">
+        <h1 className="text-4xl font-medium flex flex-col justify-between items-center gap-y-8 text-center text-white">
           روی من میتونید حساب کنید
           <span className="font-normal text-xl text-center">
             تخصص ها و دانش هایی که دارم

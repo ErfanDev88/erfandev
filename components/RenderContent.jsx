@@ -10,7 +10,7 @@ function RenderContent({ content }) {
             return (
               <p
                 key={index}
-                className="text-lg font-extralight mt-5 leading-loose text-center md:text-start text-[#cfcfcf]"
+                className="text-lg font-extralight mt-5 leading-loose text-start text-[#cfcfcf]"
                 data-aos="zoom-in"
               >
                 {block.children?.map((child, i) => {
@@ -32,11 +32,11 @@ function RenderContent({ content }) {
             let className = "w-full text-center leading-relaxed md:leading-normal md:text-start font-black mt-10";
 
             if (block.level === 3) {
-              className += " text-3xl text-white"; // h3 سفید
+              className += " text-3xl text-white"; 
             } else if (block.level === 6) {
-              className += " text-xl text-[#e9d06c]"; // h6 زرد
+              className += " text-xl text-[#e9d06c]"; 
             } else {
-              className += " text-xl text-white"; // سایر هدینگ‌ها
+              className += " text-xl text-white"; 
             }
 
             return (
