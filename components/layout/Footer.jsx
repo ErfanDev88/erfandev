@@ -7,18 +7,14 @@ export default function Footer() {
   return (
     <footer className="container w-full md:flex-row flex flex-col justify-between items-center border-[#FFE57E] border-t mt-20 gap-y-20 md:gap-0 mb-10">
       <div
-        className="flex flex-col justify-center items-center"
-        data-aos="fade-left"
-      >
+        className="flex flex-col justify-center items-center">
         <Image alt="عرفان رضایی , Erfandev" src={footerLaptop} className="md:w-[450px]" />
         <h1 className="text-3xl font-medium md:-mt-7  text-center text-white">
           برنامه نویس وب و طراح UI & UX
         </h1>
       </div>
       <div
-        className="flex flex-col gap-y-8 justify-center items-center"
-        data-aos="fade-up"
-      >
+        className="flex flex-col gap-y-8 justify-center items-center">
         <h1 className="text-3xl font-semibold text-white">لینک های مفید</h1>
         <ul className="flex flex-col justify-center items-center gap-y-4">
           <Link
@@ -47,7 +43,7 @@ export default function Footer() {
           </Link>
         </ul>
       </div>
-      <div data-aos="fade-right" className="flex flex-col gap-y-14 justify-center items-center ">
+      <div className="flex flex-col gap-y-14 justify-center items-center ">
         <h1 className="text-3xl font-semibold text-white">تماس با من</h1>
         <div className="flex justify-between flex-col items-end gap-y-10">
           <div className="flex justify-center items-center gap-x-2">

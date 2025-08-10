@@ -19,9 +19,9 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="md:px-0 px-20 w-full justify-center items-center hidden md:flex">
+    <div className="px-20 w-full justify-center items-center hidden md:flex">
       <header
-        className={`md:flex md:w-full fixed top-0 left-10 backdrop-blur-2xl flex px-8 md:py-0 py-5 md:bg-transparent bg-[#67572a26] md:backdrop-blur-none md:px-64 md:static justify-between items-center md:mt-8 gap-x-10 z-30 rounded-b-xl`}
+        className={`md:flex md:w-full fixed top-0 left-10 backdrop-blur-2xl flex px-8 md:py-0 py-5 md:bg-transparent bg-[#67572a26] md:backdrop-blur-none md:static justify-between items-center md:mt-8 gap-x-10 z-30 rounded-b-xl`}
         data-aos="fade-down"
       >
         <Link href={"/"}>
@@ -144,7 +144,7 @@ function Navbar() {
             مقالات
           </Link>
           <Dropdown
-            className="border-none bg-[#bc9f4e] z-50 rounded-lg"
+            className="border-none bg-[#bc9f4e] z-50 rounded-lg text-white"
             label="بیشتر..."
             inline
           >

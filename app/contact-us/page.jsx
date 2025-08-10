@@ -7,10 +7,10 @@ import Image from "next/image";
 
 export default function contactUs() {
   return (
-    <section className="container w-full justify-between items-center flex flex-col md:flex-row gap-y-14 mt-40 md:mt-32 md:gap-y-0 md:items-start">
+    <section className="container w-full justify-between items-center flex flex-col md:flex-row gap-y-14 mt-40 md:mt-32 md:gap-x-12 md:items-start px-20 md:px-0">
       <div
         data-aos="flip-down"
-        className="h-[340px] md:w-[400px] w-[300px] flex flex-col items-center rounded-2xl workSampleCard px-5 py-2 gap-y-12"
+        className="h-[340px] md:w-[380px] w-full flex flex-col items-center rounded-2xl workSampleCard px-5 py-2 gap-y-12"
       >
         <h1 className="text-3xl text-white font-bold flex justify-center items-center flex-col gap-y-2">
           <Image alt="شماره تماس , Erfandev" src={Phone3d} width={100} />
@@ -61,7 +61,7 @@ export default function contactUs() {
       </div>
       <div
         data-aos="flip-down"
-        className="h-[340px] md:w-[420px] w-[300px] flex flex-col items-center rounded-2xl workSampleCard px-5 py-2 gap-y-12"
+        className="h-[340px] md:w-[380px] w-full flex flex-col items-center rounded-2xl workSampleCard px-5 py-2 gap-y-12"
       >
         <h1 className="text-3xl text-white font-bold flex justify-center items-center flex-col gap-y-2">
           <Image alt="آدرس ایمیل , Erfandev" src={email3d} width={100} />
@@ -164,7 +164,7 @@ export default function contactUs() {
       </div>
       <div
         data-aos="flip-down"
-        className="md:w-[400px] w-[300px] flex flex-col items-center rounded-2xl workSampleCard px-5 pt-2 pb-5 gap-y-12"
+        className="md:w-[500px] w-full flex flex-col items-center rounded-2xl workSampleCard px-5 pt-2 pb-5 gap-y-12"
       >
         <h1 className="text-3xl text-white font-bold flex justify-center items-center flex-col gap-y-2">
           <Image

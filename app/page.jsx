@@ -60,7 +60,7 @@ export default function Home() {
       />
       <section
         data-aos="zoom-in"
-        className="w-[90%] flex flex-col md:flex-row justify-between items-center rounded-[60px] md:p-16 p-10 hero md:mt-16 mt-28 gap-y-12 md:gap-y-0"
+        className="w-full flex flex-col md:flex-row justify-between items-center rounded-[60px] md:p-16 p-10 hero md:mt-16 mt-28 gap-y-12 md:gap-y-0"
       >
         <div className="w-full md:w-[40%] flex flex-col justify-between md:items-start items-center md:gap-y-10 gap-y-8 order-1 md:order-none text-white">
           <TypeAnimation
@@ -120,33 +120,17 @@ export default function Home() {
         </div>
         <div className="w-full flex flex-col md:flex-row justify-between items-center md:items-start">
           <div
-            data-aos="fade-left"
-            className="w-full md:w-1/4 flex flex-col items-center justify-between gap-y-6"
-          >
-            <Image
-              alt="برنامه نویس موبایل, Erfandev"
-              src={mobileDeveloper}
-              className="w-72 md:w-full -mb-16"
-            />
-            <h1 className="text-3xl font-bold text-white" >برنامه نویس موبایل</h1>
-            <p className="w-3/4 md:w-full text-xl font-extralight text-center leading-relaxed text-white">
-              به تازگی برنامه نویسی موبایل رو یاد گرفتم و میتونم برنامه های
-              اندرویدی و IOS بسازم با بهترین UI ممکن. فعلا پروژه های کوچیک میزنم
-              تا کم کم برسم به پروژه های بزرگ و فروشگاهی
-            </p>
-          </div>
-          <div
             data-aos="zoom-in"
-            className="w-full md:w-1/4 flex flex-col items-center justify-between gap-y-6"
+            className="w-full md:w-2/5 flex flex-col items-center justify-between gap-y-6"
           >
             <Image
               alt="طراح ui ux سایت, Erfandev"
               src={designer}
-              className="w-72 md:w-full -mb-16"
+              className="w-72 md:w-[70%] -mb-16"
             />
             <h1 className="text-3xl font-bold text-white">طراحی سایت ( UI & UX )</h1>
             <p className="w-3/4 md:w-full text-xl font-extralight text-center leading-relaxed text-white">
-              ببیشتر از ۲ سال هست که در زمینه طراحی سایت یا همون رابط کاربری UI
+              ببیشتر از 3 سال هست که در زمینه طراحی سایت یا همون رابط کاربری UI
               & UX تجربه دارم و نمونه کار های زیادی هم دارم. معمولا زیاد روی
               پروژه هام وقت میزارم و از تمام خلاقیتم براشون استفاده میکنم تا
               بتونم طرح های زیبا و کاربر پسندی رو بسازم!
@@ -154,16 +138,16 @@ export default function Home() {
           </div>
           <div
             data-aos="fade-right"
-            className="w-full md:w-1/4 flex flex-col items-center justify-between gap-y-6"
+            className="w-full md:w-2/5 flex flex-col items-center justify-between gap-y-6"
           >
             <Image
               alt="برنامه نویس سایت و وب , Erfandev"
               src={webDeveloper}
-              className="w-72 md:w-full -mb-16"
+              className="w-72 md:w-[70%] -mb-16"
             />
             <h1 className="text-3xl font-bold text-white">برنامه نویس سایت</h1>
             <p className="w-3/4 md:w-full text-xl font-extralight text-center leading-relaxed text-white">
-              بیشتر از ۲ سال هست که توی برنامه نویسی سایت تجربه دارم. معمولا
+              بیشتر از 3 سال هست که توی برنامه نویسی سایت تجربه دارم. معمولا
               سرعتم توی انجام پروژه ها زیاده و معمولا بدون باگ هست. توی کمترین
               زمان و به بهترین شکل ممکن پروژه هارو انجام میدم
             </p>
@@ -179,18 +163,18 @@ export default function Home() {
         className="absolute top-[1800px] left-0 -z-[60]"
       />
 
-      <section className="w-full rounded-2xl md:rounded-none md:w-[119.8%] bg-[#A58A44] flex flex-col justify-between items-center mt-44 gap-y-14 lg:w-[145%]">
+      <section className="w-full rounded-2xl  md:w-[110%] xl:w-[130%] md:rounded-md bg-[#A58A44] flex flex-col justify-between items-center mt-44 gap-y-14">
         <div className="-mt-52">
           <ContinueLine from={"#FFE57E"} to={"#fff"} />
         </div>
 
         <h1 className="font-medium text-3xl text-white">آخرین نمونه کار ها</h1>
-        <main className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8">
+        <main className="flex flex-col md:flex-row md:items-center md:justify-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8 xl:gap-x-14 md:p-0 xl:p-0 p-10 md:flex-wrap">
           {cardData.slice(0, 3).map((data) => {
             return (
               <article
                 data-aos="flip-down"
-                className="h-[550px] md:w-[380px] w-[300px] flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7"
+                className="h-[570px] md:w-[400px] xl:w-[400px] w-full flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7"
                 key={data.title}
               >
                 <div className="w-full rounded-2xl shadow-xl overflow-hidden">
@@ -231,23 +215,23 @@ export default function Home() {
 
       <section className="mt-52 w-full justify-between items-center flex flex-col gap-y-14">
         <h1 className="font-medium text-3xl text-white">مقاله ها</h1>
-        <main className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-8 md:w-full md:px-10 md:justify-between">
+        <main className="flex flex-col md:flex-row md:items-center justify-between items-center gap-x-0 gap-y-8 md:gap-x-16 md:w-full md:justify-between md:p-0 xl:p-0 p-6">
           {blogData.slice(0, 2).map((data) => {
             return (
               <article
                 data-aos="flip-down"
-                className="md:w-[490px] w-[300px] flex flex-col justify-between items-center rounded-2xl workSampleCard px-4 py-8 gap-y-7"
+                className="md:w-[490px] w-full flex flex-col justify-between items-center rounded-2xl workSampleCard px-4 py-8 gap-y-7 md:px-5"
                 key={data.title}
               >
                 <div className="w-[86%] rounded-2xl shadow-xl overflow-hidden">
                   <img
                     alt={data.title}
                     src={data.imageSrc}
-                    className="w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer"
+                    className="w-full rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer "
                   />
                 </div>
                 <h1 className="text-white text-3xl font-bold">{data.title}</h1>
-                <p className="w-[80%] text-white text-xl font-extralight text-center leading-relaxed">
+                <p className="xl:w-[80%] w-full md:w-full text-white text-xl font-extralight leading-relaxed text-justify">
                   {data.description}
                 </p>
                 <Btn title={data.btnTitle} href={data.btnHref} />
@@ -372,8 +356,8 @@ export default function Home() {
             تخصص ها و دانش هایی که دارم
           </span>
         </h1>
-        <div className="w-full flex items-center flex-wrap gap-x-20 gap-y-10 md:justify-end justify-center md:px-0">
-          <div data-aos="flip-down">
+        <div className="w-full flex items-center md:flex-wrap flex-col md:flex-row md:gap-x-20 gap-y-10 md:justify-end justify-center">
+          <div data-aos="flip-down" className="w-[80%] md:w-auto">
             <SkillsBtn
               shadow={"0px 4px 60px 0px rgba(241, 191, 38, 0.05)"}
               title={"JavaScript"}
@@ -382,7 +366,7 @@ export default function Home() {
             />
           </div>
 
-          <div data-aos="flip-down">
+          <div data-aos="flip-down" className="w-[80%] md:w-auto">
             <SkillsBtn
               shadow={"0px 4px 50px 0px rgba(0, 141, 211, 0.07)"}
               title={"CSS3"}
@@ -391,7 +375,7 @@ export default function Home() {
             />
           </div>
 
-          <div data-aos="flip-down">
+          <div data-aos="flip-down" className="w-[80%] md:w-auto">
             <SkillsBtn
               shadow={"0px 4px 50px 0px rgba(238, 43, 123, 0.07)"}
               title={"Responsive Design"}
@@ -400,8 +384,8 @@ export default function Home() {
             />
           </div>
 
-          <div data-aos="flip-down">
-            {" "}
+          <div data-aos="flip-down" className="w-[80%] md:w-auto">
+           
             <SkillsBtn
               shadow={"0px 4px 50px 0px rgba(17, 105, 174, 0.07)"}
               title={"jQuery"}
@@ -410,8 +394,8 @@ export default function Home() {
             />
           </div>
 
-          <div data-aos="flip-down">
-            {" "}
+          <div data-aos="flip-down" className="w-[80%] md:w-auto">
+           
             <SkillsBtn
               shadow={"0px 4px 50px 0px rgba(228, 77, 38, 0.07)"}
               title={"HTML5"}
@@ -420,7 +404,7 @@ export default function Home() {
             />
           </div>
 
-          <div data-aos="flip-down">
+          <div data-aos="flip-down" className="w-[80%] md:w-auto">
             <SkillsBtn
               shadow={"0px 4px 50px 0px rgba(90, 58, 135, 0.07)"}
               title={"Bootstrap"}
@@ -429,7 +413,7 @@ export default function Home() {
             />
           </div>
 
-          <div data-aos="flip-down">
+          <div data-aos="flip-down" className="w-[80%] md:w-auto">
             <SkillsBtn
               shadow={"0px 4px 50px 0px rgba(0, 216, 255, 0.07)"}
               title={"ReactJS"}
@@ -438,7 +422,7 @@ export default function Home() {
             />
           </div>
 
-          <div data-aos="flip-down">
+          <div data-aos="flip-down" className="w-[80%] md:w-auto">
             <SkillsBtn
               shadow={"0px 4px 50px 0px rgba(0, 216, 255, 0.07)"}
               title={"React Native"}
@@ -447,7 +431,7 @@ export default function Home() {
             />
           </div>
 
-          <div data-aos="flip-down">
+          <div data-aos="flip-down" className="w-[80%] md:w-auto">
             <SkillsBtn
               shadow={"0px 4px 50px 0px rgba(240, 81, 51, 0.07)"}
               title={"Git"}
@@ -456,7 +440,7 @@ export default function Home() {
             />
           </div>
 
-          <div data-aos="flip-down">
+          <div data-aos="flip-down" className="w-[80%] md:w-auto">
             <SkillsBtn
               shadow={"0px 4px 50px 0px rgba(255, 255, 255, 0.07)"}
               title={"GitHub"}
@@ -465,7 +449,7 @@ export default function Home() {
             />
           </div>
 
-          <div data-aos="flip-down">
+          <div data-aos="flip-down" className="w-[80%] md:w-auto">
             <SkillsBtn
               shadow={"0px 4px 50px 0px rgba(30, 171, 188, 0.07)"}
               title={"TailwindCSS"}
@@ -474,7 +458,7 @@ export default function Home() {
             />
           </div>
 
-          <div data-aos="flip-down">
+          <div data-aos="flip-down" className="w-[80%] md:w-auto">
             <SkillsBtn
               shadow={"0px 4px 50px 0px rgba(205, 103, 154, 0.07)"}
               title={"Sass"}
@@ -483,7 +467,7 @@ export default function Home() {
             />
           </div>
 
-          <div data-aos="flip-down">
+          <div data-aos="flip-down" className="w-[80%] md:w-auto">
             <SkillsBtn
               shadow={"0px 4px 50px 0px rgba(239, 79, 43, 0.07)"}
               title={"Figma"}
@@ -492,7 +476,7 @@ export default function Home() {
             />
           </div>
 
-          <div data-aos="flip-down">
+          <div data-aos="flip-down" className="w-[80%] md:w-auto">
             <SkillsBtn
               shadow={"0px 4px 50px 0px rgba(255, 255, 255, 0.07)"}
               title={"nextJs"}

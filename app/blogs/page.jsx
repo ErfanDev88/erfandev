@@ -48,13 +48,13 @@ export default function blogs() {
         />
       </div>
       {filteredBlogs.length > 0 ? (
-        <main className="flex flex-col md:flex-row md:items-start justify-between items-center gap-x-0 gap-y-8 md:gap-x-8 md:w-full md:px-10 md:justify-between md:flex-wrap">
+        <main className="flex flex-col md:flex-row md:items-start justify-between items-center gap-x-0 gap-y-8 md:gap-x-8 md:w-full md:p-0 md:justify-between md:flex-wrap px-6">
           {filteredBlogs.map((data) => {
             return (
               <article
                 key={data.title}
                 data-aos="flip-down"
-                className="md:w-[490px] w-[300px] flex flex-col justify-between items-center rounded-2xl workSampleCard px-4 py-8 gap-y-7"
+                className="md:w-[430px] xl:w-[500px] w-full flex flex-col justify-between items-center rounded-2xl workSampleCard px-4 py-8 gap-y-7"
               >
                 <div className="w-[86%] rounded-2xl shadow-xl overflow-hidden">
                   <img
@@ -64,7 +64,7 @@ export default function blogs() {
                   />
                 </div>
                 <h1 className="text-3xl font-bold text-white text-center md:text-start">{data.title}</h1>
-                <p className="w-[80%] text-xl font-extralight text-white text-start md:text-center leading-relaxed">
+                <p className="xl:w-[80%] w-full text-xl font-extralight text-white text-justify leading-relaxed">
                   {data.description}
                 </p>
                 <Btn title={data.btnTitle} href={data.btnHref} />
