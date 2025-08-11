@@ -32,7 +32,7 @@ function Navbar() {
             className="cursor-pointer"
           />
         </Link>
-        <ul className="md:flex hidden justify-center items-center gap-x-16">
+        <ul className="md:flex hidden justify-center items-center gap-x-16 navigation">
           <Link
             href={"/"}
             className="font-extralight text-lg transition-all duration-300 hover:scale-110 cursor-pointer flex items-center gap-x-2"
@@ -144,7 +144,7 @@ function Navbar() {
             مقالات
           </Link>
           <Dropdown
-            className="border-none bg-[#bc9f4e] z-50 rounded-lg text-white"
+            className="border-none bg-[#bc9f4e] z-50 rounded-lg"
             label="بیشتر..."
             inline
           >

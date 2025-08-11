@@ -174,7 +174,7 @@ export default function Home() {
             return (
               <article
                 data-aos="flip-down"
-                className="h-[570px] md:w-[400px] xl:w-[400px] w-full flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7"
+                className="h-[570px] md:w-[380px] w-full flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7"
                 key={data.title}
               >
                 <div className="w-full rounded-2xl shadow-xl overflow-hidden">
@@ -220,7 +220,7 @@ export default function Home() {
             return (
               <article
                 data-aos="flip-down"
-                className="md:w-[490px] w-full flex flex-col justify-between items-center rounded-2xl workSampleCard px-4 py-8 gap-y-7 md:px-5"
+                className="md:w-[450px] w-full flex flex-col justify-between items-center rounded-2xl workSampleCard px-4 py-8 gap-y-7 md:px-5"
                 key={data.title}
               >
                 <div className="w-[86%] rounded-2xl shadow-xl overflow-hidden">
@@ -356,7 +356,7 @@ export default function Home() {
             تخصص ها و دانش هایی که دارم
           </span>
         </h1>
-        <div className="w-full flex items-center md:flex-wrap flex-col md:flex-row md:gap-x-20 gap-y-10 md:justify-end justify-center">
+        <div className="w-full flex items-center md:flex-wrap flex-col md:flex-row md:gap-x-20 gap-y-10 md:justify-end justify-center xl:justify-between">
           <div data-aos="flip-down" className="w-[80%] md:w-auto">
             <SkillsBtn
               shadow={"0px 4px 60px 0px rgba(241, 191, 38, 0.05)"}

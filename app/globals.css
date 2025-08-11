@@ -227,3 +227,7 @@ a{
   border-radius: 50px;
   background: linear-gradient(256deg, #2c2c2c -10.93%, #3d3d3d 112.94%);
 }
+
+.navigation button{
+  color: white;
+}

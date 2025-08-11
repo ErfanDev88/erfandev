@@ -26,7 +26,7 @@ export default function workSamples() {
               <article
                 key={data.title}
                 data-aos="flip-down"
-                className="h-[550px] md:w-[400px] w-full flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7"
+                className="h-[550px] md:w-[380px] w-full flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7"
               >
                 <div className="w-full rounded-2xl shadow-xl overflow-hidden">
                   <img
