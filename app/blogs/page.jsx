@@ -54,9 +54,9 @@ export default function blogs() {
               <article
                 key={data.title}
                 data-aos="flip-down"
-                className="md:w-[430px] xl:w-[500px] w-full flex flex-col justify-between items-center rounded-2xl workSampleCard px-4 py-8 gap-y-7"
+                className="md:w-[420px] w-full flex flex-col justify-between items-center rounded-2xl workSampleCard px-4 py-8 gap-y-7 md:px-5 xl:px-9"
               >
-                <div className="w-[86%] rounded-2xl shadow-xl overflow-hidden">
+                <div className="w-[86%] xl:w-full rounded-2xl shadow-xl overflow-hidden">
                   <img
                     alt={data.title}
                     src={data.imageSrc}
@@ -64,7 +64,7 @@ export default function blogs() {
                   />
                 </div>
                 <h1 className="text-3xl font-bold text-white text-center md:text-start">{data.title}</h1>
-                <p className="xl:w-[80%] w-full text-xl font-extralight text-white text-justify leading-relaxed">
+                <p className="w-full text-xl font-extralight text-white text-justify leading-relaxed">
                   {data.description}
                 </p>
                 <Btn title={data.btnTitle} href={data.btnHref} />

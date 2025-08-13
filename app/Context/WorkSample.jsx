@@ -5,6 +5,7 @@ export const workContext = createContext();
 
 function WorkSample({ children }) {
   const [workSamplesData, setWorkSamplesData] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -23,7 +24,7 @@ function WorkSample({ children }) {
         }));
         setWorkSamplesData(formatted);
       } catch (error) {
-        console.error("Error fetching work samples:", error);
+        alert("اینترنت خود را بررسی کنید")
       }
     };
 

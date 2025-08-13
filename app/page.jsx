@@ -43,10 +43,32 @@ export default function Home() {
   const blogData = useContext(blogContext);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const applyAOS = () => {
+      const isMobile = window.innerWidth <= 768;
+
+      document.querySelectorAll("[data-aos]").forEach(el => {
+        if (isMobile) {
+          el.setAttribute("data-aos", "fade-up");
+        } 
+      });
+
+      AOS.refresh();
+    };
+
+    applyAOS();
+
     AOS.init({
       duration: 800,
-      once: false,
+      once: true
     });
+
+    window.addEventListener("resize", applyAOS);
+
+    return () => {
+      window.removeEventListener("resize", applyAOS);
+    };
   }, []);
 
   return (
@@ -174,7 +196,7 @@ export default function Home() {
             return (
               <article
                 data-aos="flip-down"
-                className="h-[570px] md:w-[380px] w-full flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7"
+                className="h-[550px] md:w-[350px] w-full flex flex-col justify-between items-center rounded-2xl workSampleCard p-5 gap-y-7"
                 key={data.title}
               >
                 <div className="w-full rounded-2xl shadow-xl overflow-hidden">
@@ -220,10 +242,10 @@ export default function Home() {
             return (
               <article
                 data-aos="flip-down"
-                className="md:w-[450px] w-full flex flex-col justify-between items-center rounded-2xl workSampleCard px-4 py-8 gap-y-7 md:px-5"
+                className="md:w-[420px] w-full flex flex-col justify-between items-center rounded-2xl workSampleCard px-4 py-8 gap-y-7 md:px-5 xl:px-9"
                 key={data.title}
               >
-                <div className="w-[86%] rounded-2xl shadow-xl overflow-hidden">
+                <div className="w-[86%] xl:w-full rounded-2xl shadow-xl overflow-hidden">
                   <img
                     alt={data.title}
                     src={data.imageSrc}
@@ -231,7 +253,7 @@ export default function Home() {
                   />
                 </div>
                 <h1 className="text-white text-3xl font-bold">{data.title}</h1>
-                <p className="xl:w-[80%] w-full md:w-full text-white text-xl font-extralight leading-relaxed text-justify">
+                <p className="w-full text-white text-xl font-extralight leading-relaxed text-justify">
                   {data.description}
                 </p>
                 <Btn title={data.btnTitle} href={data.btnHref} />
