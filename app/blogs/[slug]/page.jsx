@@ -4,10 +4,21 @@ import { useParams } from "next/navigation";
 import RenderContent from "@/components/RenderContent";
 import { useFormik } from "formik";
 import CommentCard from "@/components/CommentCard";
+import jalaali from "jalaali-js";
 
 export default function BlogDetailPage() {
   const { slug } = useParams();
   const [blog, setBlog] = useState([]);
+
+  function formatDateToJalali(dateString) {
+  if (!dateString) return '';
+
+  const date = new Date(dateString);
+  if (isNaN(date.getTime())) return ''; 
+
+  const jDate = jalaali.toJalaali(date.getFullYear(), date.getMonth() + 1, date.getDate());
+  return `${jDate.jy}/${jDate.jm.toString().padStart(2,'0')}/${jDate.jd.toString().padStart(2,'0')}`;
+}
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -42,7 +53,7 @@ export default function BlogDetailPage() {
     fetchComments();
   }, [blog?.id]);
 
-  const [isCommentSent, setIsCommentSent] = useState(false)
+  const [isCommentSent, setIsCommentSent] = useState(false);
   const onSubmit = async (values) => {
     const res = await fetch("https://erfandev-strapi.liara.run/api/comments", {
       method: "POST",
@@ -65,7 +76,7 @@ export default function BlogDetailPage() {
 
     setComments((prev) => [...prev, newComment]);
     if (res.ok) {
-      setIsCommentSent(true)
+      setIsCommentSent(true);
       formik.resetForm();
 
       setTimeout(() => {
@@ -103,7 +114,7 @@ export default function BlogDetailPage() {
       <div className="w-full md:p-0 p-14 flex justify-between items-center gap-5 md:mt-6 md:gap-0 md:flex-row flex-col">
         <div className="flex gap-x-5" data-aos="fade-left">
           <span className="text-normal text-[#cfcfcf]">
-            تاریخ انتشار : {blog.date}
+            تاریخ انتشار : {formatDateToJalali(blog.date)}
           </span>
           <span className="text-normal text-[#cfcfcf]">
             نویسنده : {blog.author}
@@ -198,16 +209,14 @@ export default function BlogDetailPage() {
             >
               ارسال نظر
             </button>
-            {
-              isCommentSent ? (
-                <section className="p-3 rounded-2xl shadow-sm bg-[#c7ac4cd1] border-[0.5px] border-white/5 relative overflow-hidden">
-                  <span className="text-sm font-extralight text-white">کامنت شما ثبت و پس از تایید نمایش داده میشود ✅</span>
-                  <div className="absolute bottom-0 left-0 h-1 bg-[#ffedadd1] animate-progress"></div>
-                </section>
-              ):
-               null
-            }
-            
+            {isCommentSent ? (
+              <section className="p-3 rounded-2xl shadow-sm bg-[#c7ac4cd1] border-[0.5px] border-white/5 relative overflow-hidden">
+                <span className="text-sm font-extralight text-white">
+                  کامنت شما ثبت و پس از تایید نمایش داده میشود ✅
+                </span>
+                <div className="absolute bottom-0 left-0 h-1 bg-[#ffedadd1] animate-progress"></div>
+              </section>
+            ) : null}
           </form>
 
           <div className="w-1/2 md:flex hidden">
